@@ -1,0 +1,558 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Sass variables
+   ========================================================================== */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+* {
+  box-sizing: border-box; }
+
+html {
+  color: #353330;
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7; }
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+img,
+svg {
+  vertical-align: middle; }
+
+img {
+  width: 100%; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body {
+  padding-top: 50px; }
+
+.site-header {
+  position: fixed;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+#logo {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #353330;
+  padding-left: 45px; }
+
+#logo,
+.menu-trigger {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.menu-trigger {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background: none;
+  background-color: #fbd37c;
+  color: #fff;
+  letter-spacing: 1px;
+  align-items: center;
+  padding: 15px 12px; }
+  .menu-trigger:hover, .menu-trigger:focus {
+    color: #000; }
+
+.menu {
+  display: none;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  height: 100vh;
+  max-height: 480px;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 230px;
+  padding: 30px 40px 30px 60px;
+  background-color: #fbd37c;
+  font-size: 1rem; }
+  .menu.visible {
+    display: flex; }
+  .menu a {
+    text-decoration: none;
+    color: #353330; }
+
+.main-nav a {
+  display: block; }
+  .main-nav a:hover, .main-nav a:focus {
+    color: #fff; }
+
+.main-nav a + a {
+  margin-top: 25px; }
+
+.social-nav a {
+  display: inline-block;
+  text-indent: -100%;
+  overflow: hidden;
+  background-image: url("../img/sprite.svg");
+  width: 1.6rem;
+  height: 1.6rem;
+  background-size: 55rem 4.3rem;
+  margin-right: -4px; }
+  .social-nav a.linkedin {
+    background-position: -204px -21px; }
+  .social-nav a.behance {
+    background-position: -248px -21px; }
+  .social-nav a.dribbble {
+    background-position: -292px -21px; }
+
+.social-nav a + a {
+  margin-left: 15px; }
+
+/* ==========================================================================
+   SECTION GLOBALS
+   ========================================================================== */
+.container {
+  max-width: 320px;
+  margin: 0 auto; }
+
+.section {
+  padding: 45px 30px; }
+
+.section.profile,
+.section.tools {
+  background-color: #d5af86; }
+
+.section.skills,
+.section.education {
+  background-color: #a4d7c7; }
+
+.section.portfolio,
+.section.experience {
+  background-color: #f2f2f2; }
+
+.section.footer {
+  background-color: #353330; }
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 60px;
+  padding-left: 40px; }
+
+.section.portfolio .section-title,
+.section.experience .section-title {
+  color: #d5af86; }
+
+.section.footer .section-title {
+  color: #a4d7c7; }
+
+.quote {
+  margin: 35px 0 0 0;
+  font-family: 'Domine', serif;
+  font-size: 0.75rem;
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px dashed; }
+  .quote p {
+    margin: 0; }
+
+/* ==========================================================================
+   PROFILE SECTION
+   ========================================================================== */
+.profile-intro {
+  font-family: 'Domine', serif;
+  margin-bottom: 45px;
+  font-size: 0.93rem; }
+
+.profile-picture {
+  border-radius: 50%;
+  width: 50%;
+  height: auto;
+  float: right; }
+
+/* ==========================================================================
+   SKILLS SECTION
+   ========================================================================== */
+.skills-card {
+  border-radius: 15px;
+  background-color: #fff;
+  margin-bottom: 35px; }
+
+.skills-card-title {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin: 0;
+  text-align: center; }
+
+.skills-card-list {
+  list-style-type: none;
+  background-color: #d5af86;
+  font-family: 'Hind', sans-serif;
+  font-size: 0.875rem;
+  text-align: center;
+  padding-left: 0;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  margin: 0;
+  border-radius: 0 0 15px 15px; }
+  .skills-card-list li + li {
+    margin-top: 10px; }
+
+.skills-highlight {
+  border-radius: 15px;
+  background-color: #fbd37c;
+  font-family: 'Hind', sans-serif;
+  font-size: 1.1rem;
+  padding: 25px; }
+  .skills-highlight span {
+    display: inline-block;
+    padding-left: 40px; }
+
+.skills .quote {
+  border-color: #d5af86; }
+
+/* ==========================================================================
+   PORTFOLIO SECTION
+   ========================================================================== */
+.portfolio-list {
+  padding-left: 0;
+  list-style-type: none;
+  margin: 0; }
+
+.portfolio-item-title {
+  display: block;
+  color: #d5af86;
+  font-family: 'Montserrat';
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 15px; }
+
+.portfolio-item-description {
+  display: block;
+  font-size: 0.75rem;
+  text-align: center;
+  margin-bottom: 35px; }
+
+.portfolio .quote {
+  border-color: #a4d7c7; }
+
+/* ==========================================================================
+   EXPERIENCE SECTION
+   ========================================================================== */
+.experience-card + .experience-card {
+  margin-top: 35px; }
+
+.experience-list {
+  padding-left: 0;
+  list-style-type: none;
+  margin: 0;
+  background-color: #a4d7c7;
+  color: #fff;
+  font-family: 'Hind', sans-serif;
+  font-size: 1rem;
+  border-radius: 5px; }
+
+.experience-item {
+  padding: 10px 25px; }
+  .experience-item:nth-child(even) {
+    background-color: #a4bed7; }
+
+.experience-item-description {
+  padding-left: 35px;
+  display: inline-block; }
+
+/* ==========================================================================
+   TOOLS SECTION
+   ========================================================================== */
+.tools-list {
+  padding-left: 0;
+  list-style-type: none;
+  font-family: "Hind", serif;
+  font-size: 0.935rem; }
+
+.tools-item {
+  margin-bottom: 20px;
+  display: flex; }
+
+.tools-item-title {
+  width: 50%;
+  text-align: right; }
+
+.tools-item-rating {
+  width: 50%;
+  text-align: left;
+  margin-left: 20px; }
+  .tools-item-rating span {
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #000;
+    border: 1px solid #000;
+    width: 10px;
+    height: 10px; }
+  .tools-item-rating.one span:last-child,
+  .tools-item-rating.two span:nth-last-child(-n+3),
+  .tools-item-rating.three span:nth-last-child(-n+2),
+  .tools-item-rating.four span:nth-last-child(-n+2) {
+    background: none; }
+
+.tools .quote {
+  border-color: #1e91d6; }
+
+/* ==========================================================================
+   EDUCATION SECTION
+   ========================================================================== */
+.education-heading {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem; }
+
+.education-title,
+.education-item,
+.education-courses {
+  font-family: 'Hind', serif;
+  margin: 0; }
+
+.education-item {
+  margin-bottom: 50px; }
+
+.education-title,
+.education-description li {
+  padding: 10px; }
+
+.education-title {
+  padding-top: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #d5af86;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1rem; }
+
+.education-description li:last-child {
+  padding-bottom: 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; }
+
+.education-description,
+.education-course-title,
+.education-course-place {
+  padding-left: 0;
+  list-style-type: none;
+  margin: 0;
+  color: #000;
+  font-size: 0.875rem;
+  line-height: 0.875rem; }
+  .education-description li:nth-child(odd),
+  .education-course-title li:nth-child(odd),
+  .education-course-place li:nth-child(odd) {
+    background-color: #f2f2f2; }
+  .education-description li:nth-child(even),
+  .education-course-title li:nth-child(even),
+  .education-course-place li:nth-child(even) {
+    background-color: #fff; }
+
+.education-courses {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0; }
+
+.education-course {
+  margin-bottom: 25px; }
+
+.education-course-title,
+.education-course-place {
+  padding-left: 30px;
+  display: block; }
+
+.education-course-place {
+  margin-top: 5px; }
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer-note {
+  color: #d5af86;
+  text-align: center;
+  margin-bottom: 45px; }
+
+.contacts a {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Hind", sans-serif;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  color: #353330;
+  box-shadow: 0 5px 0 0 #ff9b6d;
+  background-color: #fbd37c;
+  padding: 5px 30px 0 60px;
+  width: 100%;
+  margin-bottom: 25px; }
+  .contacts a:hover, .contacts a:focus {
+    background-color: #fbe87c;
+    box-shadow: 0 5px 0 0 #ff9b6d; }
+  .contacts a:active {
+    transform: translate(0, 5px);
+    box-shadow: 0 1px 0 0; }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+.hidden {
+  display: none !important; }
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after,
+  *:first-letter,
+  *:first-line {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }

@@ -1,0 +1,9 @@
+TEAM
+
+  Francisco Brito / Designer / 3fmail@gmail.com
+  Bruno Pinto / Developer / bmorosopinto@gmail.com
+
+TECHNOLOGY COLOPHON
+
+  CSS3, HTML5, Vanilla JavaScript
+  Apache Server Configs, Normalize.css
