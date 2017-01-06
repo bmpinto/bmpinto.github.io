@@ -96,6 +96,46 @@
 		"oAP": "\/humans.txt",
 		"oF": 0
 		},
+	"\/img\/chameleon_experience.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/chameleon_experience.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/chameleon_portfolio.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/chameleon_portfolio.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/chameleon_skills.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/chameleon_skills.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/chameleon_tools.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/chameleon_tools.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/img\/francisco.jpg": {
 		"ft": 16384,
 		"iS": 50036,
@@ -112,6 +152,14 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/img\/portfolio\/asanatimer1_small.jpg": {
+		"ft": 16384,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/portfolio\/asanatimer1_small.jpg",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/img\/portfolio\/asanatimer2.jpg": {
 		"ft": 16384,
 		"iS": 88420,
@@ -120,14 +168,6 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/img\/portfolio\/asanatimersmall.jpg": {
-		"ft": 16384,
-		"iS": 4492,
-		"oA": 0,
-		"oAP": "\/img\/portfolio\/asanatimersmall.jpg",
-		"oF": 0,
-		"opt": 1
-		},
 	"\/img\/portfolio\/franciscodesign1.jpg": {
 		"ft": 16384,
 		"iS": 45611,
@@ -135,6 +175,14 @@
 		"oAP": "\/img\/portfolio\/franciscodesign1.jpg",
 		"oF": 0,
 		"opt": 0
+		},
+	"\/img\/portfolio\/franciscodesign1_small.jpg": {
+		"ft": 16384,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/portfolio\/franciscodesign1_small.jpg",
+		"oF": 0,
+		"opt": 1
 		},
 	"\/img\/portfolio\/franciscodesign2.jpg": {
 		"ft": 16384,
@@ -149,6 +197,14 @@
 		"iS": 63614,
 		"oA": 0,
 		"oAP": "\/img\/portfolio\/homecake1.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/portfolio\/homecake1_small.jpg": {
+		"ft": 16384,
+		"iS": 3746,
+		"oA": 0,
+		"oAP": "\/img\/portfolio\/homecake1_small.jpg",
 		"oF": 0,
 		"opt": 0
 		},
@@ -168,6 +224,14 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/img\/portfolio\/irmandadedonatao1_small.jpg": {
+		"ft": 16384,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/portfolio\/irmandadedonatao1_small.jpg",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/img\/portfolio\/irmandadedonatao2.jpg": {
 		"ft": 16384,
 		"iS": 88679,
@@ -176,19 +240,19 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/img\/portfolio\/liliananunoyoga1.jpg": {
-		"ft": 16384,
-		"iS": 82794,
-		"oA": 0,
-		"oAP": "\/img\/portfolio\/liliananunoyoga1.jpg",
-		"oF": 0,
-		"opt": 0
-		},
 	"\/img\/portfolio\/pictty1.jpg": {
 		"ft": 16384,
 		"iS": 85757,
 		"oA": 0,
 		"oAP": "\/img\/portfolio\/pictty1.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/portfolio\/pictty1_small.jpg": {
+		"ft": 16384,
+		"iS": 3935,
+		"oA": 0,
+		"oAP": "\/img\/portfolio\/pictty1_small.jpg",
 		"oF": 0,
 		"opt": 0
 		},
@@ -205,6 +269,14 @@
 		"iS": 82794,
 		"oA": 0,
 		"oAP": "\/img\/portfolio\/yogaliliananuno1.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/portfolio\/yogaliliananuno1_small.jpg": {
+		"ft": 16384,
+		"iS": 4392,
+		"oA": 0,
+		"oAP": "\/img\/portfolio\/yogaliliananuno1_small.jpg",
 		"oF": 0,
 		"opt": 0
 		},
@@ -260,7 +332,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 503618852,
-	"displayValue": "htdocs",
+	"displayValue": "francisco",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_magenta"
 	},

@@ -33,24 +33,6 @@ html {
 }
 
 /*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
@@ -70,11 +52,19 @@ img {
    ========================================================================== */
 body {
   padding-top: 50px;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .site-header {
   position: fixed;
   top: 0;
+  z-index: 3;
   height: 50px;
   width: 100%;
   background-color: #fff;
@@ -85,7 +75,6 @@ body {
 
 #logo {
   display: inline-block;
-  // font-size: 1.125rem;
   text-decoration: none;
   letter-spacing: 2px;
   color: $text-color;
@@ -94,7 +83,7 @@ body {
 
 #logo,
 .menu-trigger {
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -109,11 +98,35 @@ body {
   letter-spacing: 1px;
   align-items: center;
   padding: 15px 12px;
+  width: 66px;
 
   &:hover,
   &:focus {
     color: #000;
+    outline: 0;
   }
+}
+
+.menu-trigger.triggered {
+  position: relative;
+  text-indent: 66px;
+
+  &:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../img/sprite.svg);
+    background-size: 1850px 380px;
+    background-position: 719px -183px;
+  }
+}
+
+.triggered + .menu {
+  display: flex;
 }
 
 .menu {
@@ -128,7 +141,7 @@ body {
   width: 230px;
   padding: 30px 40px 30px 60px;
   background-color: $yellow;
-  font-size: 1rem;
+  font-size: 16px;
 
   &.visible { display: flex; }
 
@@ -159,9 +172,9 @@ body {
     text-indent: -100%;
     overflow: hidden;
     background-image: url('../img/sprite.svg');
-    width: 1.6rem;
-    height: 1.6rem;
-    background-size: 55rem 4.3rem;
+    width: 25px;
+    height: 25px;
+    background-size: 880px 69px;
     margin-right: -4px;
 
     &.linkedin { background-position: -204px -21px; }
@@ -176,6 +189,7 @@ body {
    SECTION GLOBALS
    ========================================================================== */
 .container {
+  position: relative;
   max-width: 320px;
   margin: 0 auto;
 }
@@ -205,7 +219,7 @@ body {
 
 .section-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: normal;
   color: #fff;
   margin-top: 0;
@@ -223,7 +237,7 @@ body {
 .quote {
   margin: 35px 0 0 0;
   font-family: 'Domine', serif;
-  font-size: 0.75rem;
+  font-size: 12px;
   padding: 25px;
   border-radius: 15px;
   border: 2px dashed;
@@ -234,249 +248,347 @@ body {
 /* ==========================================================================
    PROFILE SECTION
    ========================================================================== */
-.profile-intro {
-  font-family: 'Domine', serif;
-  margin-bottom: 45px;
-  font-size: 0.93rem;
-}
 
-.profile-picture {
-  border-radius: 50%;
-  width: 50%;
-  height: auto;
-  float: right;
+.profile {
+  .intro {
+    font-family: 'Domine', serif;
+    margin-bottom: 45px;
+    font-size: 15px;
+  }
+
+  .picture {
+    border-radius: 50%;
+    width: 50%;
+    height: auto;
+    float: right;
+  }
 }
 
 /* ==========================================================================
    SKILLS SECTION
    ========================================================================== */
-.skills-card {
-  border-radius: 15px;
-  background-color: #fff;
-  margin-bottom: 35px;
-}
 
-.skills-card-title {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  margin: 0;
-  text-align: center;
-}
+.skills {
+  padding-bottom: 88px;
 
-.skills-card-list {
-  list-style-type: none;
-  background-color: $brown;
-  font-family: 'Hind', sans-serif;
-  font-size: 0.875rem;
-  text-align: center;
-  padding-left: 0;
-  padding-top: 35px;
-  padding-bottom: 35px;
-  margin: 0;
-  border-radius: 0 0 15px 15px;
+  .card {
+    border-radius: 15px;
+    background-color: #fff;
+    margin-bottom: 35px;
+  }
 
-  li + li { margin-top: 10px; }
-}
+  .card-title {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: 0;
+    text-align: center;
+  }
 
-.skills-highlight {
-  border-radius: 15px;
-  background-color: $yellow;
-  font-family: 'Hind', sans-serif;
-  font-size: 1.1rem;
-  padding: 25px;
+  .card-list {
+    background-color: $brown;
+    font-family: 'Hind', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    margin: 0;
+    border-radius: 0 0 15px 15px;
 
-  span {
-    display: inline-block;
-    padding-left: 40px;
+    li + li { margin-top: 10px; }
+  }
+
+  .highlight {
+    border-radius: 15px;
+    background-color: $yellow;
+    font-family: 'Hind', sans-serif;
+    font-size: 17px;
+    padding: 25px;
+
+    span {
+      display: inline-block;
+      padding-left: 40px;
+    }
+  }
+
+  .quote { border-color: $brown; }
+
+  .chameleon {
+    position: absolute;
+    bottom: -80px;
+    right: 28px;
+    transform: translateY(50%);
+    width: 120px;
+
+    .cls-1{ fill:#a4bed7; }
+    .cls-2{ fill:#d5af86; }
+    .cls-3{ fill:#ffffff; }
+    .cls-4{ fill:#cfe795; }
+    .cls-5{ fill:#a4d7c7; }
   }
 }
-
-.skills .quote { border-color: $brown; }
 
 /* ==========================================================================
    PORTFOLIO SECTION
    ========================================================================== */
-.portfolio-list {
-  padding-left: 0;
-  list-style-type: none;
-  margin: 0;
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 130px;
+
+  .image-link {
+    display: block;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .image.is-blurred {
+    position: relative;
+    z-index: 2;
+    filter: blur(6px);
+    opacity: 1;
+    animation: fadeOut .3s cubic-bezier(0.55, 0.09, 0.68, 0.53) 1 forwards;
+  }
+
+  .is-paused {
+    -webkit-animation-play-state: paused !important;
+    -moz-animation-play-state: paused !important;
+    animation-play-state: paused !important;
+  }
+
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+    }
+  }
+
+  .image.original {
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .item-title {
+    display: block;
+    color: $brown;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .item-description {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .quote { border-color: $green; }
+
+  .chameleon {
+    position: absolute;
+    bottom: -165px;
+    right: 20px;
+    transform: translate(43%, 64%);
+    width: 280px;
+
+    .cls-1{ fill:#d5af86; }
+    .cls-2{ fill:#ffffff; }
+    .cls-3{ fill:#fbd37c; }
+    .cls-4{ fill:#f2f2f2; }
+    .cls-5{ fill:#cfe795; }
+  }
 }
 
-.portfolio-item-title {
-  display: block;
-  color: $brown;
-  font-family: 'Montserrat';
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  margin-top: 15px;
-}
-
-.portfolio-item-description {
-  display: block;
-  font-size: 0.75rem;
-  text-align: center;
-  margin-bottom: 35px;
-}
-
-.portfolio .quote { border-color: $green; }
-
-
-/* ==========================================================================
-   EXPERIENCE SECTION
-   ========================================================================== */
-.experience-card + .experience-card { margin-top: 35px; }
-
-.experience-list {
-  padding-left: 0;
-  list-style-type: none;
-  margin: 0;
-  background-color: $green;
-  color: #fff;
-  font-family: 'Hind', sans-serif;
-  font-size: 1rem;
-  border-radius: 5px;
-}
-
-.experience-item {
-  padding: 10px 25px;
-  &:nth-child(even) { background-color: $purple; }
-}
-
-.experience-item-description {
-  padding-left: 35px;
-  display: inline-block;
-}
 
 /* ==========================================================================
    TOOLS SECTION
    ========================================================================== */
+.tools {
+  padding-bottom: 65px;
 
-.tools-list {
-  padding-left: 0;
-  list-style-type: none;
-  font-family: "Hind", serif;
-  font-size: 0.935rem;
-}
-
-.tools-item {
-  margin-bottom: 20px;
-  display: flex;
-}
-
-.tools-item-title {
-  width: 50%;
-  text-align: right;
-}
-
-.tools-item-rating {
-  width: 50%;
-  text-align: left;
-  margin-left: 20px;
-
-  span {
-    border-radius: 50%;
-    display: inline-block;
-    background-color: #000;
-    border: 1px solid #000;
-    width: 10px;
-    height: 10px;
+  .list {
+    font-family: "Hind", serif;
+    font-size: 15px;
   }
 
-  &.one span:last-child,
-  &.two span:nth-last-child(-n+3),
-  &.three span:nth-last-child(-n+2),
-  &.four span:nth-last-child(-n+2), {
-    background: none;
+  .item {
+    margin-bottom: 20px;
+    display: flex;
+  }
+
+  .item-title {
+    width: 50%;
+    text-align: right;
+  }
+
+  .item-rating {
+    width: 50%;
+    text-align: left;
+    margin-left: 20px;
+
+    span {
+      border-radius: 50%;
+      display: inline-block;
+      background-color: #000;
+      border: 1px solid #000;
+      width: 10px;
+      height: 10px;
+    }
+
+    &.one span:last-child,
+    &.two span:nth-last-child(-n+3),
+    &.three span:nth-last-child(-n+2),
+    &.four span:nth-last-child(-n+2), {
+      background: none;
+    }
+  }
+
+  .quote { border-color: $blue; }
+
+  .chameleon {
+    position: absolute;
+    bottom: -65px;
+    right: 0;
+    transform: translateY(88%);
+    width: 235px;
+
+    .cls-1{ fill:#d5af86; }
+    .cls-2{ fill:#a4bed7; }
+    .cls-3{ fill:#ffffff; }
+    .cls-4{ fill:#cfe795; }
+    .cls-5{ fill:#a4d7c7; }
   }
 }
-
-.tools .quote { border-color: $blue; }
 
 
 /* ==========================================================================
    EDUCATION SECTION
    ========================================================================== */
 
-.education-heading {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
+.education {
+  padding-top: 140px;
+
+  .heading {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+  }
+
+  .title,
+  .item,
+  .courses {
+    font-family: 'Hind', serif;
+    margin: 0;
+  }
+
+  .item {
+    margin-bottom: 50px;
+  }
+
+  .title,
+  .description li {
+    padding: 10px;
+  }
+
+  .title {
+    padding-top: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: $brown;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .description li:last-child {
+    padding-bottom: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .description,
+  .course .name,
+  .course .place {
+    color: #000;
+    font-size: 14px;
+    line-height: 14px;
+
+    li:nth-child(odd) { background-color: $grey; }
+    li:nth-child(even) { background-color: #fff; }
+  }
+
+  .course {
+    margin-bottom: 25px;
+
+    .name,
+    .place {
+      padding-left: 30px;
+      display: block;
+    }
+
+    .place {
+      margin-top: 5px;
+    }
+  }
 }
 
-.education-title,
-.education-item,
-.education-courses {
-  font-family: 'Hind', serif;
-  margin: 0;
-}
 
-.education-item {
-  margin-bottom: 50px;
-}
+/* ==========================================================================
+   EXPERIENCE SECTION
+   ========================================================================== */
+.experience {
+  padding-bottom: 95px;
 
-.education-title,
-.education-description li {
-  padding: 10px;
-}
+  .card + .card { margin-top: 35px; }
 
-.education-title {
-  padding-top: 15px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  background-color: $brown;
-  color: #fff;
-  font-size: 1rem;
-  line-height: 1rem;
-}
+  .list {
+    background-color: $green;
+    color: #fff;
+    font-family: 'Hind', sans-serif;
+    font-size: 11px;
+    border-radius: 5px;
+  }
 
-.education-description li:last-child {
-  padding-bottom: 15px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
+  .item {
+    padding: 10px 25px;
+    &:nth-child(even) { background-color: $purple; }
+  }
 
-.education-description,
-.education-course-title,
-.education-course-place {
-  padding-left: 0;
-  list-style-type: none;
-  margin: 0;
-  color: #000;
-  font-size: 0.875rem;
-  line-height: 0.875rem;
+  .item-description {
+    padding-left: 35px;
+    display: inline-block;
+  }
 
-  li:nth-child(odd) { background-color: $grey; }
-  li:nth-child(even) { background-color: #fff; }
-}
+  .chameleon {
+    position: absolute;
+    bottom: -95px;
+    right: 0;
+    transform: translate(83%, 40%);
+    width: 530px;
 
-.education-courses {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.education-course {
-  margin-bottom: 25px;
-}
-
-.education-course-title,
-.education-course-place {
-  padding-left: 30px;
-  display: block;
-}
-
-.education-course-place {
-  margin-top: 5px;
+    .cls-1{ fill:#ff9b6d; }
+    .cls-2{ fill:#d5af86; }
+    .cls-3{ fill:#ffffff; }
+    .cls-4{ fill:#a4d7c7; }
+    .cls-5{ fill:#f2f2f2; }
+  }
 }
 
 /* ==========================================================================
    FOOTER
    ========================================================================== */
 
-.footer-note {
+.footer .note {
   color: $brown;
   text-align: center;
   margin-bottom: 45px;
@@ -487,12 +599,12 @@ body {
   text-decoration: none;
   text-align: center;
   font-family: "Hind", sans-serif;
-  font-size: 1.5rem;
+  font-size: 22px;
   border-radius: 15px;
   color: $text-color;
   box-shadow: 0 5px 0 0 $orange;
   background-color: $yellow;
-  padding: 5px 30px 0 60px;
+  padding: 5px 30px 0 50px;
   width: 100%;
   margin-bottom: 25px;
 
@@ -554,13 +666,6 @@ body {
     width: auto;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
 
 /*
  * Clearfix: contain floats
@@ -593,91 +698,3 @@ body {
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 }
-
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after,
-    *:first-letter,
-    *:first-line {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-      max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
-
-
