@@ -74,6 +74,16 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/css\/normalize-min.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/normalize-min-min.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/css\/normalize.css": {
 		"aP": 0,
 		"bl": 0,
@@ -152,14 +162,6 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/img\/portfolio\/asanatimer1_small.jpg": {
-		"ft": 16384,
-		"iS": 0,
-		"oA": 0,
-		"oAP": "\/img\/portfolio\/asanatimer1_small.jpg",
-		"oF": 0,
-		"opt": 1
-		},
 	"\/img\/portfolio\/asanatimer2.jpg": {
 		"ft": 16384,
 		"iS": 88420,
@@ -176,14 +178,6 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/img\/portfolio\/franciscodesign1_small.jpg": {
-		"ft": 16384,
-		"iS": 0,
-		"oA": 0,
-		"oAP": "\/img\/portfolio\/franciscodesign1_small.jpg",
-		"oF": 0,
-		"opt": 1
-		},
 	"\/img\/portfolio\/franciscodesign2.jpg": {
 		"ft": 16384,
 		"iS": 69747,
@@ -197,14 +191,6 @@
 		"iS": 63614,
 		"oA": 0,
 		"oAP": "\/img\/portfolio\/homecake1.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/img\/portfolio\/homecake1_small.jpg": {
-		"ft": 16384,
-		"iS": 3746,
-		"oA": 0,
-		"oAP": "\/img\/portfolio\/homecake1_small.jpg",
 		"oF": 0,
 		"opt": 0
 		},
@@ -224,14 +210,6 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/img\/portfolio\/irmandadedonatao1_small.jpg": {
-		"ft": 16384,
-		"iS": 0,
-		"oA": 0,
-		"oAP": "\/img\/portfolio\/irmandadedonatao1_small.jpg",
-		"oF": 0,
-		"opt": 1
-		},
 	"\/img\/portfolio\/irmandadedonatao2.jpg": {
 		"ft": 16384,
 		"iS": 88679,
@@ -248,14 +226,6 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/img\/portfolio\/pictty1_small.jpg": {
-		"ft": 16384,
-		"iS": 3935,
-		"oA": 0,
-		"oAP": "\/img\/portfolio\/pictty1_small.jpg",
-		"oF": 0,
-		"opt": 0
-		},
 	"\/img\/portfolio\/pictty2.jpg": {
 		"ft": 16384,
 		"iS": 61841,
@@ -269,14 +239,6 @@
 		"iS": 82794,
 		"oA": 0,
 		"oAP": "\/img\/portfolio\/yogaliliananuno1.jpg",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/img\/portfolio\/yogaliliananuno1_small.jpg": {
-		"ft": 16384,
-		"iS": 4392,
-		"oA": 0,
-		"oAP": "\/img\/portfolio\/yogaliliananuno1_small.jpg",
 		"oF": 0,
 		"opt": 0
 		},
@@ -304,13 +266,22 @@
 		"oAP": "\/index.html",
 		"oF": 0
 		},
+	"\/js\/main-min.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/js\/main-min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/js\/main.js": {
 		"ft": 64,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/js\/main-min.js",
 		"oF": 0,
-		"sC": 1,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/LICENSE.txt": {
@@ -332,7 +303,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 503618852,
-	"displayValue": "francisco",
+	"displayValue": "htdocs",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_magenta"
 	},
@@ -2075,8 +2046,8 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
-		"minifyOutput": 1,
-		"syntaxCheckerStyle": 1,
+		"minifyOutput": 0,
+		"syntaxCheckerStyle": 0,
 		"transpilerStyle": 0
 		},
 	"languageDefaultsJSON": {
