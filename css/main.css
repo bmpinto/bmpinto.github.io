@@ -1,1 +1,672 @@
-/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */*{box-sizing:border-box}html{color:#353330;font-size:1em;font-family:'Montserrat',sans-serif;line-height:1.7}img,svg{vertical-align:middle}img{width:100%}body{padding-top:50px;overflow-x:hidden}ul{list-style-type:none;padding-left:0;margin:0}.site-header{position:fixed;top:0;z-index:3;height:50px;width:100%;background-color:#fff;display:flex;justify-content:space-between;align-items:center}#logo{display:inline-block;text-decoration:none;letter-spacing:2px;color:#353330;padding-left:45px}#logo,.menu-trigger{font-size:12px;font-weight:bold;text-transform:uppercase}.menu-trigger{-webkit-appearance:none;-moz-appearance:none;border:0;background:0;background-color:#fbd37c;color:#fff;letter-spacing:1px;align-items:center;padding:15px 12px;width:66px}.menu-trigger:hover,.menu-trigger:focus{color:#000;outline:0}.menu-trigger.triggered{position:relative;text-indent:66px}.menu-trigger.triggered:before{content:"";width:15px;height:15px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background-image:url(../img/sprite.svg);background-size:1850px 380px;background-position:719px -183px}.triggered+.menu{display:flex}.menu{display:none;flex-flow:column wrap;justify-content:space-between;height:100vh;max-height:480px;position:absolute;right:0;top:50px;width:230px;padding:30px 40px 30px 60px;background-color:#fbd37c;font-size:16px}.menu.visible{display:flex}.menu a{text-decoration:none;color:#353330}.main-nav a{display:block}.main-nav a:hover,.main-nav a:focus{color:#fff}.main-nav a+a{margin-top:25px}.social-nav a{display:inline-block;text-indent:-100%;overflow:hidden;background-image:url("../img/sprite.svg");width:25px;height:25px;background-size:1420px 310px;margin-right:-4px}.social-nav a.linkedin{background-position:-555px 167px}.social-nav a.linkedin:hover,.social-nav a.linkedin:focus{background-position:-590px 167px}.social-nav a.linkedin:active{background-position:-625px 167px}.social-nav a.behance{background-position:-660px 167px}.social-nav a.behance:hover,.social-nav a.behance:focus{background-position:-695px 167px}.social-nav a.behance:active{background-position:-730px 167px}.social-nav a.dribbble{background-position:-765px 167px}.social-nav a.dribbble:hover,.social-nav a.dribbble:focus{background-position:-800px 167px}.social-nav a.dribbble:active{background-position:-835px 167px}.social-nav a+a{margin-left:15px}.container{position:relative;max-width:320px;margin:0 auto}.section{padding:45px 30px}.section.profile,.section.tools{background-color:#d5af86}.section.skills,.section.education{background-color:#a4d7c7}.section.portfolio,.section.experience{background-color:#f2f2f2}.section.footer{background-color:#353330}.section-title{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:normal;color:#fff;margin-top:0;margin-bottom:60px;padding-left:40px}.section.portfolio .section-title,.section.experience .section-title{color:#d5af86}.section.footer .section-title{color:#a4d7c7}.quote{margin:35px 0 0 0;font-family:'Domine',serif;font-size:12px;padding:25px;border-radius:15px;border:2px dashed}.quote p{margin:0}.is-relative{position:relative!important}.profile .intro{font-family:'Domine',serif;margin-bottom:45px;font-size:15px}.profile .image{border-radius:50%;width:50%;height:auto;float:right}.profile .image.placeholder{position:relative;z-index:2;filter:blur(2px);opacity:1;animation:fadeOut .3s cubic-bezier(0.55,0.09,0.68,0.53) 1 forwards}.profile .is-paused{-webkit-animation-play-state:paused!important;-moz-animation-play-state:paused!important;animation-play-state:paused!important}@keyframes fadeOut{to{opacity:0}}.profile .image.original{position:absolute;opacity:1;bottom:0;right:0;z-index:1}.skills{padding-bottom:88px}.skills .card{border-radius:15px;background-color:#fff;margin-bottom:35px}.skills .card-title{padding-top:25px;padding-bottom:25px;margin:0;text-align:center}.skills .card-list{background-color:#d5af86;font-family:'Hind',sans-serif;font-size:14px;text-align:center;padding-top:35px;padding-bottom:35px;margin:0;border-radius:0 0 15px 15px}.skills .card-list li+li{margin-top:10px}.skills .highlight{border-radius:15px;background-color:#fbd37c;font-family:'Hind',sans-serif;font-size:17px;padding:25px}.skills .highlight span{position:relative;display:inline-block;padding-left:40px}.skills .highlight span:before{content:"";width:30px;height:30px;position:absolute;left:0;top:0;background-image:url(../img/sprite.svg);background-size:1850px 310px;background-position:662px 169px}.skills .quote{border-color:#d5af86}.skills .chameleon{position:absolute;bottom:-80px;right:28px;transform:translateY(50%);width:120px}.skills .chameleon .cls-1{fill:#a4bed7}.skills .chameleon .cls-2{fill:#d5af86}.skills .chameleon .cls-3{fill:#fff}.skills .chameleon .cls-4{fill:#cfe795}.skills .chameleon .cls-5{fill:#a4d7c7}.portfolio{padding-top:60px;padding-bottom:130px}.portfolio .image-link{display:block;overflow:hidden;position:relative;max-height:250px}.portfolio .image{width:100%;height:auto}.portfolio .image.placeholder{position:relative;z-index:2;filter:blur(6px);opacity:1;animation:fadeOut .3s cubic-bezier(0.55,0.09,0.68,0.53) 1 forwards}.portfolio .is-paused{-webkit-animation-play-state:paused!important;-moz-animation-play-state:paused!important;animation-play-state:paused!important}@keyframes fadeOut{to{opacity:0}}.portfolio .image.original{position:absolute;opacity:1;top:0;left:0;z-index:1}.portfolio .item-title{display:block;color:#d5af86;font-family:'Montserrat';font-size:14px;text-transform:uppercase;text-decoration:none;text-align:center;margin-top:15px}.portfolio .item-description{display:block;font-size:12px;text-align:center;margin-bottom:35px}.portfolio .quote{border-color:#a4d7c7}.portfolio .chameleon{position:absolute;bottom:-165px;right:20px;transform:translate(43%,64%);width:280px}.portfolio .chameleon .cls-1{fill:#d5af86}.portfolio .chameleon .cls-2{fill:#fff}.portfolio .chameleon .cls-3{fill:#fbd37c}.portfolio .chameleon .cls-4{fill:#f2f2f2}.portfolio .chameleon .cls-5{fill:#cfe795}.tools{padding-bottom:65px}.tools .list{font-family:"Hind",serif;font-size:15px}.tools .item{margin-bottom:20px;display:flex}.tools .item-title{width:50%;text-align:right}.tools .item-rating{width:50%;text-align:left;margin-left:20px}.tools .item-rating span{border-radius:50%;display:inline-block;background-color:#000;border:1px solid #000;width:10px;height:10px}.tools .item-rating.one span:last-child,.tools .item-rating.two span:nth-last-child(-n+3),.tools .item-rating.three span:nth-last-child(-n+2),.tools .item-rating.four span:nth-last-child(-n+2){background:0}.tools .quote{border-color:#1e91d6}.tools .chameleon{position:absolute;bottom:-65px;right:0;transform:translateY(88%);width:235px}.tools .chameleon .cls-1{fill:#d5af86}.tools .chameleon .cls-2{fill:#a4bed7}.tools .chameleon .cls-3{fill:#fff}.tools .chameleon .cls-4{fill:#cfe795}.tools .chameleon .cls-5{fill:#a4d7c7}.education{padding-top:140px}.education .heading{margin-top:0;margin-bottom:20px;font-family:'Montserrat',sans-serif;font-size:17px}.education .title,.education .item,.education .courses{font-family:'Hind',serif;margin:0}.education .item{margin-bottom:50px}.education .title,.education .description li{padding:10px 10px 10px 35px;position:relative}.education .title:before,.education .description li:before{content:"";width:15px;height:15px;position:absolute;left:10px;top:10px;background-image:url(../img/sprite.svg);background-size:850px 310px}.education .description li:nth-child(1):before{background-position:-642px 161px}.education .description li:nth-child(2):before{background-position:-681px 161px}.education .description li:nth-child(3):before{background-position:-725px 162px}.education .description li:nth-child(4):before{background-position:-765px 162px}.education .title{padding-top:15px;border-top-left-radius:10px;border-top-right-radius:10px;background-color:#d5af86;color:#fff;font-size:14px;line-height:1;letter-spacing:1.1px}.education .title:before{top:13px;background-position:-596px 163px}.education .description li:last-child{padding-bottom:15px;border-bottom-left-radius:10px;border-bottom-right-radius:10px}.education .description,.education .course .name,.education .course .place{color:#000;font-size:12px;line-height:14px}.education .description li:nth-child(odd),.education .course .name li:nth-child(odd),.education .course .place li:nth-child(odd){background-color:#f2f2f2}.education .description li:nth-child(even),.education .course .name li:nth-child(even),.education .course .place li:nth-child(even){background-color:#fff}.education .course{margin-bottom:25px}.education .course .name,.education .course .place{padding-left:25px;display:block;position:relative}.education .course .name:before,.education .course .place:before{content:"";width:15px;height:15px;position:absolute;left:0;top:0;background-image:url(../img/sprite.svg);background-size:750px 310px}.education .course .name:before{background-position:204px 161px}.education .course .place:before{background-position:130px 161px}.education .course .place{margin-top:7px}.experience{padding-bottom:95px}.experience .card+.card{margin-top:35px}.experience .list{background-color:#a4d7c7;color:#fff;font-family:'Hind',sans-serif;font-size:11px;border-radius:5px}.experience .item{padding:10px 25px;position:relative}.experience .item:nth-child(even){background-color:#a4bed7}.experience .item:before{content:"";width:18px;height:15px;position:absolute;left:20px;top:17px;transform:translateY(-50%);background-image:url(../img/sprite.svg);background-size:830px 310px;background-position:63px 163px}.experience .item:nth-child(2):before{background-size:1100px 310px;background-position:245px 163px}.experience .item:nth-child(3):before{background-position:104px 163px}.experience .item-description{padding-left:25px;display:inline-block}.experience .chameleon{position:absolute;bottom:-95px;right:0;transform:translate(83%,40%);width:530px}.experience .chameleon .cls-1{fill:#ff9b6d}.experience .chameleon .cls-2{fill:#d5af86}.experience .chameleon .cls-3{fill:#fff}.experience .chameleon .cls-4{fill:#a4d7c7}.experience .chameleon .cls-5{fill:#f2f2f2}.footer .note{color:#d5af86;text-align:center;margin-bottom:45px}.contacts a{display:inline-block;text-decoration:none;text-align:center;font-family:"Hind",sans-serif;font-size:22px;border-radius:15px;color:#353330;box-shadow:0 5px 0 0 #ff9b6d;background-color:#fbd37c;padding:5px 30px 0 50px;width:100%;margin-bottom:25px}.contacts a:hover,.contacts a:focus{background-color:#fbe87c;box-shadow:0 5px 0 0 #ff9b6d}.contacts a:active{transform:translate(0,5px);box-shadow:0 1px 0 0}.hidden{display:none!important}.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Sass variables
+   ========================================================================== */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+* {
+  box-sizing: border-box; }
+
+html {
+  color: #353330;
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7; }
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+img,
+svg {
+  vertical-align: middle; }
+
+img {
+  width: 100%; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body {
+  padding-top: 50px;
+  overflow-x: hidden; }
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0; }
+
+.site-header {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+#logo {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #353330;
+  padding-left: 45px; }
+
+#logo,
+.menu-trigger {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.menu-trigger {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background: none;
+  background-color: #fbd37c;
+  color: #fff;
+  letter-spacing: 1px;
+  align-items: center;
+  padding: 15px 12px;
+  width: 66px; }
+  .menu-trigger:hover, .menu-trigger:focus {
+    color: #000;
+    outline: 0; }
+
+.menu-trigger.triggered {
+  position: relative;
+  text-indent: 66px; }
+  .menu-trigger.triggered:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../img/sprite.svg);
+    background-size: 1850px 380px;
+    background-position: 719px -183px; }
+
+.triggered + .menu {
+  display: flex; }
+
+.menu {
+  display: none;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  height: 100vh;
+  max-height: 480px;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 230px;
+  padding: 30px 40px 30px 60px;
+  background-color: #fbd37c;
+  font-size: 16px; }
+  .menu.visible {
+    display: flex; }
+  .menu a {
+    text-decoration: none;
+    color: #353330; }
+
+.main-nav a {
+  display: block; }
+  .main-nav a:hover, .main-nav a:focus {
+    color: #fff; }
+
+.main-nav a + a {
+  margin-top: 25px; }
+
+.social-nav a {
+  display: inline-block;
+  text-indent: -100%;
+  overflow: hidden;
+  background-image: url("../img/sprite.svg");
+  width: 25px;
+  height: 25px;
+  background-size: 1420px 310px;
+  margin-right: -4px; }
+  .social-nav a.linkedin {
+    background-position: -555px 167px; }
+    .social-nav a.linkedin:hover, .social-nav a.linkedin:focus {
+      background-position: -590px 167px; }
+    .social-nav a.linkedin:active {
+      background-position: -625px 167px; }
+  .social-nav a.behance {
+    background-position: -660px 167px; }
+    .social-nav a.behance:hover, .social-nav a.behance:focus {
+      background-position: -695px 167px; }
+    .social-nav a.behance:active {
+      background-position: -730px 167px; }
+  .social-nav a.dribbble {
+    background-position: -765px 167px; }
+    .social-nav a.dribbble:hover, .social-nav a.dribbble:focus {
+      background-position: -800px 167px; }
+    .social-nav a.dribbble:active {
+      background-position: -835px 167px; }
+
+.social-nav a + a {
+  margin-left: 15px; }
+
+/* ==========================================================================
+   SECTION GLOBALS
+   ========================================================================== */
+.container {
+  position: relative;
+  max-width: 320px;
+  margin: 0 auto; }
+
+.section {
+  padding: 45px 30px; }
+
+.section.profile,
+.section.tools {
+  background-color: #d5af86; }
+
+.section.skills,
+.section.education {
+  background-color: #a4d7c7; }
+
+.section.portfolio,
+.section.experience {
+  background-color: #f2f2f2; }
+
+.section.footer {
+  background-color: #353330; }
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 60px;
+  padding-left: 40px; }
+
+.section.portfolio .section-title,
+.section.experience .section-title {
+  color: #d5af86; }
+
+.section.footer .section-title {
+  color: #a4d7c7; }
+
+.quote {
+  margin: 35px 0 0 0;
+  font-family: 'Domine', serif;
+  font-size: 12px;
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px dashed; }
+  .quote p {
+    margin: 0; }
+
+/* ==========================================================================
+   PROFILE SECTION
+   ========================================================================== */
+.is-relative {
+  position: relative !important; }
+
+.profile .intro {
+  font-family: 'Domine', serif;
+  margin-bottom: 45px;
+  font-size: 15px; }
+
+.profile .image {
+  border-radius: 50%;
+  width: 50%;
+  height: auto;
+  float: right; }
+
+.profile .image.placeholder {
+  position: relative;
+  z-index: 2;
+  filter: blur(6px);
+  opacity: 1;
+  animation: fadeOut 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53) 1 forwards; }
+
+.profile .is-paused {
+  -webkit-animation-play-state: paused !important;
+  -moz-animation-play-state: paused !important;
+  animation-play-state: paused !important; }
+
+@keyframes fadeOut {
+  to {
+    opacity: 0; } }
+
+.profile .image.original {
+  position: absolute;
+  opacity: 1;
+  bottom: 0;
+  right: 0;
+  z-index: 1; }
+
+/* ==========================================================================
+   SKILLS SECTION
+   ========================================================================== */
+.skills {
+  padding-bottom: 88px; }
+  .skills .card {
+    border-radius: 15px;
+    background-color: #fff;
+    margin-bottom: 35px; }
+  .skills .card-title {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: 0;
+    text-align: center; }
+  .skills .card-list {
+    background-color: #d5af86;
+    font-family: 'Hind', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    margin: 0;
+    border-radius: 0 0 15px 15px; }
+    .skills .card-list li + li {
+      margin-top: 10px; }
+  .skills .highlight {
+    border-radius: 15px;
+    background-color: #fbd37c;
+    font-family: 'Hind', sans-serif;
+    font-size: 17px;
+    padding: 25px; }
+    .skills .highlight span {
+      position: relative;
+      display: inline-block;
+      padding-left: 40px; }
+      .skills .highlight span:before {
+        content: "";
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url(../img/sprite.svg);
+        background-size: 1850px 310px;
+        background-position: 662px 169px; }
+  .skills .quote {
+    border-color: #d5af86; }
+  .skills .chameleon {
+    position: absolute;
+    bottom: -80px;
+    right: 28px;
+    transform: translateY(50%);
+    width: 120px; }
+    .skills .chameleon .cls-1 {
+      fill: #a4bed7; }
+    .skills .chameleon .cls-2 {
+      fill: #d5af86; }
+    .skills .chameleon .cls-3 {
+      fill: #ffffff; }
+    .skills .chameleon .cls-4 {
+      fill: #cfe795; }
+    .skills .chameleon .cls-5 {
+      fill: #a4d7c7; }
+
+/* ==========================================================================
+   PORTFOLIO SECTION
+   ========================================================================== */
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 130px; }
+  .portfolio .image-link {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    max-height: 250px; }
+  .portfolio .image {
+    width: 100%;
+    height: auto; }
+  .portfolio .image.placeholder {
+    position: relative;
+    z-index: 2;
+    filter: blur(6px);
+    opacity: 1;
+    animation: fadeOut 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53) 1 forwards; }
+  .portfolio .is-paused {
+    -webkit-animation-play-state: paused !important;
+    -moz-animation-play-state: paused !important;
+    animation-play-state: paused !important; }
+
+@keyframes fadeOut {
+  to {
+    opacity: 0; } }
+  .portfolio .image.original {
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .portfolio .item-title {
+    display: block;
+    color: #d5af86;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 15px; }
+  .portfolio .item-description {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 35px; }
+  .portfolio .quote {
+    border-color: #a4d7c7; }
+  .portfolio .chameleon {
+    position: absolute;
+    bottom: -165px;
+    right: 20px;
+    transform: translate(43%, 64%);
+    width: 280px; }
+    .portfolio .chameleon .cls-1 {
+      fill: #d5af86; }
+    .portfolio .chameleon .cls-2 {
+      fill: #ffffff; }
+    .portfolio .chameleon .cls-3 {
+      fill: #fbd37c; }
+    .portfolio .chameleon .cls-4 {
+      fill: #f2f2f2; }
+    .portfolio .chameleon .cls-5 {
+      fill: #cfe795; }
+
+/* ==========================================================================
+   TOOLS SECTION
+   ========================================================================== */
+.tools {
+  padding-bottom: 65px; }
+  .tools .list {
+    font-family: "Hind", serif;
+    font-size: 15px; }
+  .tools .item {
+    margin-bottom: 20px;
+    display: flex; }
+  .tools .item-title {
+    width: 50%;
+    text-align: right; }
+  .tools .item-rating {
+    width: 50%;
+    text-align: left;
+    margin-left: 20px; }
+    .tools .item-rating span {
+      border-radius: 50%;
+      display: inline-block;
+      background-color: #000;
+      border: 1px solid #000;
+      width: 10px;
+      height: 10px; }
+    .tools .item-rating.one span:last-child,
+    .tools .item-rating.two span:nth-last-child(-n+3),
+    .tools .item-rating.three span:nth-last-child(-n+2),
+    .tools .item-rating.four span:nth-last-child(-n+2) {
+      background: none; }
+  .tools .quote {
+    border-color: #1e91d6; }
+  .tools .chameleon {
+    position: absolute;
+    bottom: -65px;
+    right: 0;
+    transform: translateY(88%);
+    width: 235px; }
+    .tools .chameleon .cls-1 {
+      fill: #d5af86; }
+    .tools .chameleon .cls-2 {
+      fill: #a4bed7; }
+    .tools .chameleon .cls-3 {
+      fill: #ffffff; }
+    .tools .chameleon .cls-4 {
+      fill: #cfe795; }
+    .tools .chameleon .cls-5 {
+      fill: #a4d7c7; }
+
+/* ==========================================================================
+   EDUCATION SECTION
+   ========================================================================== */
+.education {
+  padding-top: 140px; }
+  .education .heading {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px; }
+  .education .title,
+  .education .item,
+  .education .courses {
+    font-family: 'Hind', serif;
+    margin: 0; }
+  .education .item {
+    margin-bottom: 50px; }
+  .education .title,
+  .education .description li {
+    padding: 10px 10px 10px 35px;
+    position: relative; }
+    .education .title:before,
+    .education .description li:before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      background-image: url(../img/sprite.svg);
+      background-size: 850px 310px; }
+  .education .description li:nth-child(1):before {
+    background-position: -642px 161px; }
+  .education .description li:nth-child(2):before {
+    background-position: -681px 161px; }
+  .education .description li:nth-child(3):before {
+    background-position: -725px 162px; }
+  .education .description li:nth-child(4):before {
+    background-position: -765px 162px; }
+  .education .title {
+    padding-top: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #d5af86;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 1.1px; }
+    .education .title:before {
+      top: 13px;
+      background-position: -596px 163px; }
+  .education .description li:last-child {
+    padding-bottom: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
+  .education .description,
+  .education .course .name,
+  .education .course .place {
+    color: #000;
+    font-size: 12px;
+    line-height: 14px; }
+    .education .description li:nth-child(odd),
+    .education .course .name li:nth-child(odd),
+    .education .course .place li:nth-child(odd) {
+      background-color: #f2f2f2; }
+    .education .description li:nth-child(even),
+    .education .course .name li:nth-child(even),
+    .education .course .place li:nth-child(even) {
+      background-color: #fff; }
+  .education .course {
+    margin-bottom: 25px; }
+    .education .course .name,
+    .education .course .place {
+      padding-left: 25px;
+      display: block;
+      position: relative; }
+      .education .course .name:before,
+      .education .course .place:before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url(../img/sprite.svg);
+        background-size: 750px 310px; }
+    .education .course .name:before {
+      background-position: 204px 161px; }
+    .education .course .place:before {
+      background-position: 130px 161px; }
+    .education .course .place {
+      margin-top: 7px; }
+
+/* ==========================================================================
+   EXPERIENCE SECTION
+   ========================================================================== */
+.experience {
+  padding-bottom: 95px; }
+  .experience .card + .card {
+    margin-top: 35px; }
+  .experience .list {
+    background-color: #a4d7c7;
+    color: #fff;
+    font-family: 'Hind', sans-serif;
+    font-size: 11px;
+    border-radius: 5px; }
+  .experience .item {
+    padding: 10px 25px;
+    position: relative; }
+    .experience .item:nth-child(even) {
+      background-color: #a4bed7; }
+    .experience .item:before {
+      content: "";
+      width: 18px;
+      height: 15px;
+      position: absolute;
+      left: 20px;
+      top: 17px;
+      transform: translateY(-50%);
+      background-image: url(../img/sprite.svg);
+      background-size: 830px 310px;
+      background-position: 63px 163px; }
+    .experience .item:nth-child(2):before {
+      background-size: 1100px 310px;
+      background-position: 245px 163px; }
+    .experience .item:nth-child(3):before {
+      background-position: 104px 163px; }
+  .experience .item-description {
+    padding-left: 25px;
+    display: inline-block; }
+  .experience .chameleon {
+    position: absolute;
+    bottom: -95px;
+    right: 0;
+    transform: translate(83%, 40%);
+    width: 530px; }
+    .experience .chameleon .cls-1 {
+      fill: #ff9b6d; }
+    .experience .chameleon .cls-2 {
+      fill: #d5af86; }
+    .experience .chameleon .cls-3 {
+      fill: #ffffff; }
+    .experience .chameleon .cls-4 {
+      fill: #a4d7c7; }
+    .experience .chameleon .cls-5 {
+      fill: #f2f2f2; }
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer .note {
+  color: #d5af86;
+  text-align: center;
+  margin-bottom: 45px; }
+
+.contacts a {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Hind", sans-serif;
+  font-size: 22px;
+  border-radius: 15px;
+  color: #353330;
+  box-shadow: 0 5px 0 0 #ff9b6d;
+  background-color: #fbd37c;
+  padding: 5px 30px 0 50px;
+  width: 100%;
+  margin-bottom: 25px; }
+  .contacts a:hover, .contacts a:focus {
+    background-color: #fbe87c;
+    box-shadow: 0 5px 0 0 #ff9b6d; }
+  .contacts a:active {
+    transform: translate(0, 5px);
+    box-shadow: 0 1px 0 0; }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+.hidden {
+  display: none !important; }
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }

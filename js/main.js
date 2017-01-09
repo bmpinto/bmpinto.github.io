@@ -1,1 +1,60 @@
-function elementInViewport(a){var b=a.getBoundingClientRect();return b.top>=0&&b.left>=0&&b.top<=(window.innerHeight||document.documentElement.clientHeight)}function lazyLoadImages(){containers.map(function(a,b){if(elementInViewport(a)){a.classList.add("loaded"),containers=containers.filter(function(a){return!a.classList.contains("loaded")});var c=a.querySelector(".image-link"),d=a.querySelector("img"),e=d.getAttribute("src"),f=e.replace("_small",""),g=d.getAttribute("data-image-height"),h=d.getAttribute("data-image-width"),i=new Image;i.classList.add("original","image"),i.setAttribute("src",f),i.setAttribute("height",g),i.setAttribute("width",h),i.onload=function(){c?c.appendChild(i):a.appendChild(i),d.classList.remove("is-paused"),d.addEventListener("animationend",function(){i.classList.add("is-relative"),d.remove()})}}})}var menuTrigger=document.querySelector(".menu-trigger");menuTrigger.addEventListener("click",function(){this.innerText=this.classList.contains("triggered")?"menu":"fechar",this.classList.toggle("triggered")});var lazyContainers=document.querySelectorAll(".lazy"),containers=[];[].forEach.call(lazyContainers,function(a){return containers.push(a)}),window.addEventListener("scroll",lazyLoadImages);
+var menuTrigger = document.querySelector('.menu-trigger')
+
+menuTrigger.addEventListener('click', function() {
+  this.innerText = this.classList.contains('triggered') ? 'menu' : 'fechar'
+
+  this.classList.toggle('triggered')
+})
+
+function elementInViewport(el) {
+  var rect = el.getBoundingClientRect()
+
+  return (
+    rect.top    >= 0
+    && rect.left   >= 0
+    && rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+  )
+}
+
+var lazyContainers = document.querySelectorAll('.lazy')
+var containers = []
+
+;[].forEach.call(lazyContainers, function(container) {
+  return containers.push(container);
+})
+
+window.addEventListener('scroll', lazyLoadImages)
+
+function lazyLoadImages() {
+  containers.map(function(container, index) {
+    if(elementInViewport(container)) {
+      container.classList.add('loaded')
+      containers = containers.filter(function(container) {
+        return !container.classList.contains('loaded')
+      })
+
+      var imageLink = container.querySelector('.image-link')
+      var containerPlaceholder = container.querySelector('img')
+      var placeholderSource = containerPlaceholder.getAttribute('src')
+      var imageSource = placeholderSource.replace('_small', '')
+      var imageHeight = containerPlaceholder.getAttribute('data-image-height')
+      var imageWidth = containerPlaceholder.getAttribute('data-image-width')
+      
+      var image = new Image()
+      image.classList.add('original', 'image')
+      image.setAttribute('src', imageSource)
+      image.setAttribute('height', imageHeight)
+      image.setAttribute('width', imageWidth);
+
+      image.onload = function() {
+        imageLink ? imageLink.appendChild(image) : container.appendChild(image)
+        containerPlaceholder.classList.remove('is-paused')
+
+        containerPlaceholder.addEventListener('animationend', function() {
+          image.classList.add('is-relative')
+          containerPlaceholder.remove()
+        })
+      }
+    }
+  })
+}
