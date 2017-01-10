@@ -2,59 +2,85 @@ var menuTrigger = document.querySelector('.menu-trigger')
 
 menuTrigger.addEventListener('click', function() {
   this.innerText = this.classList.contains('triggered') ? 'menu' : 'fechar'
-
   this.classList.toggle('triggered')
 })
 
-function elementInViewport(el) {
-  var rect = el.getBoundingClientRect()
+function elementInViewport(element) {
+  var rect = element.getBoundingClientRect()
 
   return (
-    rect.top    >= 0
-    && rect.left   >= 0
-    && rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+    rect.top >= 0 && rect.left >= 0 &&
+    rect.top <= (window.innerHeight || document.documentElement.clientHeight)
   )
 }
 
-var lazyContainers = document.querySelectorAll('.lazy')
-var containers = []
+function setImageAttributes(placeholder) {
+  return {
+    source: placeholder.getAttribute('data-image-source'),
+    height: placeholder.getAttribute('data-image-height'),
+    width: placeholder.getAttribute('data-image-width')
+  }
+}
 
-;[].forEach.call(lazyContainers, function(container) {
-  return containers.push(container);
-})
+function getImageAttributes(attributes) {
+  var image = new Image()
 
-window.addEventListener('scroll', lazyLoadImages)
+  image.classList.add('original', 'image')
+  image.setAttribute('src', attributes.source)
+  image.setAttribute('height', attributes.height)
+  image.setAttribute('width', attributes.width)
+
+  return image;
+}
+
+function createImage(placeholder) {
+  var imageAttributes = setImageAttributes(placeholder)
+  return getImageAttributes(imageAttributes)
+}
+
+// remove containers already loaded
+function filterContainers(containersArray, currentContainer) {
+  currentContainer.classList.add('loaded')
+  return containersArray.filter(function(container) {
+    return !container.classList.contains('loaded')
+  })
+}
+
+// remove placeholder image after animation
+function animate(image, placeholder) {
+  placeholder.parentNode.appendChild(image)
+  placeholder.classList.remove('is-paused')
+
+  placeholder.addEventListener('animationend', function() {
+    image.classList.add('is-relative')
+    placeholder.remove()
+  })
+}
 
 function lazyLoadImages() {
-  containers.map(function(container, index) {
-    if(elementInViewport(container)) {
-      container.classList.add('loaded')
-      containers = containers.filter(function(container) {
-        return !container.classList.contains('loaded')
-      })
+  lazyContainers.map(function(currentContainer) {
+    if(elementInViewport(currentContainer)) {
+      var placeholder = currentContainer.querySelector('img')
+      var image = createImage(placeholder)
 
-      var imageLink = container.querySelector('.image-link')
-      var containerPlaceholder = container.querySelector('img')
-      var placeholderSource = containerPlaceholder.getAttribute('src')
-      var imageSource = placeholderSource.replace('_small', '')
-      var imageHeight = containerPlaceholder.getAttribute('data-image-height')
-      var imageWidth = containerPlaceholder.getAttribute('data-image-width')
-      
-      var image = new Image()
-      image.classList.add('original', 'image')
-      image.setAttribute('src', imageSource)
-      image.setAttribute('height', imageHeight)
-      image.setAttribute('width', imageWidth);
+      lazyContainers = filterContainers(lazyContainers, currentContainer)
 
-      image.onload = function() {
-        imageLink ? imageLink.appendChild(image) : container.appendChild(image)
-        containerPlaceholder.classList.remove('is-paused')
+      image.onload = function () {
+        placeholder.parentNode.appendChild(image)
+        placeholder.classList.remove('is-paused')
 
-        containerPlaceholder.addEventListener('animationend', function() {
+        placeholder.addEventListener('animationend', function() {
           image.classList.add('is-relative')
-          containerPlaceholder.remove()
+          placeholder.remove()
         })
       }
     }
   })
 }
+
+var lazy = document.querySelectorAll('.lazy')
+var lazyContainers = []
+;[].forEach.call(lazy, function(container) {
+  return lazyContainers.push(container)
+})
+window.addEventListener('scroll', lazyLoadImages)

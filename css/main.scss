@@ -52,7 +52,6 @@ img {
    ========================================================================== */
 body {
   padding-top: 50px;
-  overflow-x: hidden;
 }
 
 ul {
@@ -219,9 +218,13 @@ ul {
 /* ==========================================================================
    SECTION GLOBALS
    ========================================================================== */
+.site-content {
+  overflow: hidden;
+}
+
 .container {
   position: relative;
-  max-width: 320px;
+  max-width: 260px;
   margin: 0 auto;
 }
 
@@ -249,13 +252,26 @@ ul {
 }
 
 .section-title {
+  position: relative;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: normal;
   color: #fff;
   margin-top: 0;
   margin-bottom: 60px;
-  padding-left: 40px;
+  padding-left: 70px;
+
+  &:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(../img/sprite_xl.svg);
+    background-size: 378px 70px;
+  }
 }
 
 .section.portfolio,
@@ -266,6 +282,7 @@ ul {
 .section.footer .section-title { color: $green; }
 
 .quote {
+  position: relative;
   margin: 35px 0 0 0;
   font-family: 'Domine', serif;
   font-size: 12px;
@@ -273,7 +290,25 @@ ul {
   border-radius: 15px;
   border: 2px dashed;
 
-  p { margin: 0; }
+  &:before,
+  &:after,
+  p:after {
+    content: "";
+    position: absolute;
+  }
+
+  &:before {
+    border-right: 2px dashed;
+  }
+
+  &:after {
+    border-right: 2px dashed;
+  }
+
+  p {
+    position: relative;
+    margin: 0;
+  }
 }
 
 /* ==========================================================================
@@ -284,6 +319,8 @@ ul {
 }
 
 .profile {
+  .section-title:before { background-position: -108px -10px; }
+
   .intro {
     font-family: 'Domine', serif;
     margin-bottom: 45px;
@@ -332,6 +369,8 @@ ul {
 .skills {
   padding-bottom: 88px;
 
+  .section-title:before { background-position: -330px -10px; }
+
   .card {
     border-radius: 15px;
     background-color: #fff;
@@ -339,8 +378,8 @@ ul {
   }
 
   .card-title {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin: 0;
     text-align: center;
   }
@@ -350,8 +389,8 @@ ul {
     font-family: 'Hind', sans-serif;
     font-size: 14px;
     text-align: center;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     margin: 0;
     border-radius: 0 0 15px 15px;
 
@@ -362,7 +401,7 @@ ul {
     border-radius: 15px;
     background-color: $yellow;
     font-family: 'Hind', sans-serif;
-    font-size: 17px;
+    font-size: 15px;
     padding: 25px;
 
     span {
@@ -384,7 +423,35 @@ ul {
     }
   }
 
-  .quote { border-color: $brown; }
+  .quote {
+    border-color: $brown;
+
+    &:before,
+    &:after {
+      border-color: $brown;
+    }
+
+    &:before {
+      right: 33px;
+      bottom: -68px;
+      height: 68px;
+      transform: rotate(-22deg);
+    }
+
+    &:after {
+      right: 20px;
+      bottom: -65px;
+      height: 65px;
+    }
+
+    p:after {
+      right: -3px;
+      bottom: -27px;
+      height: 20px;
+      width: 25px;
+      background-color: $green;
+    }
+  }
 
   .chameleon {
     position: absolute;
@@ -406,7 +473,9 @@ ul {
    ========================================================================== */
 .portfolio {
   padding-top: 60px;
-  padding-bottom: 130px;
+  padding-bottom: 150px;
+
+  .section-title:before { background-position: -54px -10px; }
 
   .image-link {
     display: block;
@@ -466,14 +535,42 @@ ul {
     margin-bottom: 35px;
   }
 
-  .quote { border-color: $green; }
+  .quote {
+    border-color: $green;
+
+    &:before,
+    &:after {
+      border-color: $green;
+    }
+
+    &:before {
+      left: 85px;
+      bottom: -65px;
+      height: 75px;
+      transform: rotate(-45deg);
+    }
+
+    &:after {
+      left: 110px;
+      bottom: -55px;
+      height: 54px;
+      transform: rotate(-5deg);
+    }
+
+    p:after {
+      left: 36px;
+      bottom: -27px;
+      height: 20px;
+      width: 48px;
+      background-color: $grey;
+    }
+  }
 
   .chameleon {
     position: absolute;
-    bottom: -165px;
-    right: 20px;
-    transform: translate(43%, 64%);
-    width: 280px;
+    bottom: -410px;
+    right: -160px;
+    width: 325px;
 
     .cls-1{ fill:#d5af86; }
     .cls-2{ fill:#ffffff; }
@@ -490,6 +587,8 @@ ul {
 .tools {
   padding-bottom: 65px;
 
+  .section-title:before { background-position: -163px -10px; }
+
   .list {
     font-family: "Hind", serif;
     font-size: 15px;
@@ -501,14 +600,14 @@ ul {
   }
 
   .item-title {
-    width: 50%;
+    width: 60%;
     text-align: right;
   }
 
   .item-rating {
-    width: 50%;
+    width: 40%;
     text-align: left;
-    margin-left: 20px;
+    padding-left: 20px;
 
     span {
       border-radius: 50%;
@@ -552,6 +651,8 @@ ul {
 .education {
   padding-top: 140px;
 
+  .section-title:before { background-position: -220px -10px; }
+
   .heading {
     margin-top: 0;
     margin-bottom: 20px;
@@ -586,7 +687,7 @@ ul {
       background-size: 850px 310px;
     }
   }
-    
+
   .description li {
     &:nth-child(1):before { background-position: -642px 161px; }
     &:nth-child(2):before { background-position: -681px 161px; }
@@ -664,6 +765,8 @@ ul {
 .experience {
   padding-bottom: 95px;
 
+  .section-title:before { background-position: -275px -10px; }
+
   .card + .card { margin-top: 35px; }
 
   .list {
@@ -726,13 +829,19 @@ ul {
    FOOTER
    ========================================================================== */
 
-.site-footer .note {
-  color: $brown;
-  text-align: center;
-  margin-bottom: 45px;
+.site-footer {
+  .section-title:before { background-position: 0 -10px; }
+
+  .note {
+    color: $brown;
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 14px;
+  }
 }
 
 .contacts a {
+  position: relative;
   display: inline-block;
   text-decoration: none;
   text-align: center;
@@ -756,6 +865,21 @@ ul {
     transform: translate(0, 5px);
     box-shadow: 0 1px 0 0;
   }
+
+  &:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(../img/sprite.svg);
+    background-size: 1175px 103px;
+  }
+
+  &.tel:before { background-position: 1232px 165px; }
+  &.email:before { background-position: 1204px 165px; }
 }
 
 
