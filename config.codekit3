@@ -154,11 +154,27 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/img\/francisco_small.jpg": {
+		"ft": 16384,
+		"iS": 904,
+		"oA": 0,
+		"oAP": "\/img\/francisco_small.jpg",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/img\/portfolio\/asanatimer1.jpg": {
 		"ft": 16384,
 		"iS": 77298,
 		"oA": 0,
 		"oAP": "\/img\/portfolio\/asanatimer1.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/portfolio\/asanatimer1_small.jpg": {
+		"ft": 16384,
+		"iS": 1047,
+		"oA": 0,
+		"oAP": "\/img\/portfolio\/asanatimer1_small.jpg",
 		"oF": 0,
 		"opt": 0
 		},
@@ -178,6 +194,14 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/img\/portfolio\/franciscodesign1_small.jpg": {
+		"ft": 16384,
+		"iS": 1001,
+		"oA": 0,
+		"oAP": "\/img\/portfolio\/franciscodesign1_small.jpg",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/img\/portfolio\/franciscodesign2.jpg": {
 		"ft": 16384,
 		"iS": 69747,
@@ -191,6 +215,14 @@
 		"iS": 63614,
 		"oA": 0,
 		"oAP": "\/img\/portfolio\/homecake1.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/portfolio\/homecake1_small.jpg": {
+		"ft": 16384,
+		"iS": 1146,
+		"oA": 0,
+		"oAP": "\/img\/portfolio\/homecake1_small.jpg",
 		"oF": 0,
 		"opt": 0
 		},
@@ -210,6 +242,14 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/img\/portfolio\/irmandadedonatao1_small.jpg": {
+		"ft": 16384,
+		"iS": 1242,
+		"oA": 0,
+		"oAP": "\/img\/portfolio\/irmandadedonatao1_small.jpg",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/img\/portfolio\/irmandadedonatao2.jpg": {
 		"ft": 16384,
 		"iS": 88679,
@@ -226,6 +266,14 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/img\/portfolio\/pictty1_small.jpg": {
+		"ft": 16384,
+		"iS": 1217,
+		"oA": 0,
+		"oAP": "\/img\/portfolio\/pictty1_small.jpg",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/img\/portfolio\/pictty2.jpg": {
 		"ft": 16384,
 		"iS": 61841,
@@ -239,6 +287,14 @@
 		"iS": 82794,
 		"oA": 0,
 		"oAP": "\/img\/portfolio\/yogaliliananuno1.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/portfolio\/yogaliliananuno1_small.jpg": {
+		"ft": 16384,
+		"iS": 1252,
+		"oA": 0,
+		"oAP": "\/img\/portfolio\/yogaliliananuno1_small.jpg",
 		"oF": 0,
 		"opt": 0
 		},
