@@ -525,7 +525,8 @@ ul {
     margin-top: 0;
     margin-bottom: 20px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 17px; }
+    font-size: 17px;
+    text-transform: uppercase; }
   .education .title,
   .education .item,
   .education .courses {
