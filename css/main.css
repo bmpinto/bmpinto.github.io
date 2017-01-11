@@ -291,7 +291,8 @@ ul {
     padding-top: 15px;
     padding-bottom: 15px;
     margin: 0;
-    text-align: center; }
+    text-align: center;
+    font-weight: normal; }
   .skills .card-list {
     background-color: #d5af86;
     font-family: 'Hind', sans-serif;
@@ -564,6 +565,7 @@ ul {
     background-color: #d5af86;
     color: #fff;
     font-size: 14px;
+    font-weight: normal;
     line-height: 1;
     letter-spacing: 1.1px; }
     .education .title:before {
