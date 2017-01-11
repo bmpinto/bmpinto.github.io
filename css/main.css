@@ -521,6 +521,8 @@ ul {
    ========================================================================== */
 .education {
   padding-top: 140px; }
+  .education .extras-container {
+    padding-left: 35px; }
   .education .section-title:before {
     background-position: -220px -10px; }
   .education .heading {
