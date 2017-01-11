@@ -405,6 +405,7 @@ ul {
     text-align: center;
     margin-top: 15px; }
   .portfolio .item-description {
+    font-family: 'Domine', serif;
     display: block;
     font-size: 12px;
     text-align: center;
