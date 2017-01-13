@@ -483,6 +483,11 @@ ul {
     overflow: hidden;
     position: relative;
     max-height: 250px;
+
+    &:hover,
+    &:focus {
+      .hover { z-index: 1; }
+    }
   }
 
   .image {
@@ -516,6 +521,12 @@ ul {
     top: 0;
     left: 0;
     z-index: 1;
+  }
+
+  .image.hover {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .item-title {

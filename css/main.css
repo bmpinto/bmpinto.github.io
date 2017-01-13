@@ -373,6 +373,8 @@ ul {
     overflow: hidden;
     position: relative;
     max-height: 250px; }
+    .portfolio .image-link:hover .hover, .portfolio .image-link:focus .hover {
+      z-index: 1; }
   .portfolio .image {
     width: 100%;
     height: auto; }
@@ -396,6 +398,10 @@ ul {
     top: 0;
     left: 0;
     z-index: 1; }
+  .portfolio .image.hover {
+    position: absolute;
+    top: 0;
+    left: 0; }
   .portfolio .item-title {
     display: block;
     color: #d5af86;

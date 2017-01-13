@@ -220,7 +220,7 @@
 		},
 	"\/img\/portfolio\/homecake1_small.jpg": {
 		"ft": 16384,
-		"iS": 1146,
+		"iS": 3746,
 		"oA": 0,
 		"oAP": "\/img\/portfolio\/homecake1_small.jpg",
 		"oF": 0,
@@ -268,7 +268,7 @@
 		},
 	"\/img\/portfolio\/pictty1_small.jpg": {
 		"ft": 16384,
-		"iS": 1217,
+		"iS": 3935,
 		"oA": 0,
 		"oAP": "\/img\/portfolio\/pictty1_small.jpg",
 		"oF": 0,
@@ -292,7 +292,7 @@
 		},
 	"\/img\/portfolio\/yogaliliananuno1_small.jpg": {
 		"ft": 16384,
-		"iS": 1252,
+		"iS": 4392,
 		"oA": 0,
 		"oAP": "\/img\/portfolio\/yogaliliananuno1_small.jpg",
 		"oF": 0,
@@ -369,8 +369,8 @@
 	},
 "projectAttributes": {
 	"creationDate": 503618852,
-	"displayValue": "htdocs",
-	"displayValueWasSetByUser": 0,
+	"displayValue": "francisco",
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "brackets_magenta"
 	},
 "projectSettings": {

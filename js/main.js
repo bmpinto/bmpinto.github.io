@@ -14,18 +14,23 @@ function elementInViewport(element) {
   )
 }
 
-function setImageAttributes(placeholder) {
+function setImageAttributes(placeholder, source) {
+  var hoverSource = placeholder.getAttribute('data-image-hover-source')
+  var originalSource = placeholder.getAttribute('data-image-source')
+  var imageSource = source ? hoverSource : originalSource
+
   return {
-    source: placeholder.getAttribute('data-image-source'),
+    source: imageSource,
     height: placeholder.getAttribute('data-image-height'),
     width: placeholder.getAttribute('data-image-width')
   }
 }
 
-function getImageAttributes(attributes) {
+function getImageAttributes(attributes, source) {
   var image = new Image()
+  var imageClass = source ? source : 'original'
 
-  image.classList.add('original', 'image')
+  image.classList.add(imageClass, 'image')
   image.setAttribute('src', attributes.source)
   image.setAttribute('height', attributes.height)
   image.setAttribute('width', attributes.width)
@@ -33,9 +38,16 @@ function getImageAttributes(attributes) {
   return image;
 }
 
-function createImage(placeholder) {
-  var imageAttributes = setImageAttributes(placeholder)
-  return getImageAttributes(imageAttributes)
+function canCreateSourceImage(image, source) {
+  return image.getAttribute('data-image-' + source + '-source')
+}
+
+function createImage(placeholder, source) {
+  if(source && !canCreateSourceImage(placeholder, source))
+    return
+
+  var imageAttributes = setImageAttributes(placeholder, source)
+  return getImageAttributes(imageAttributes, source)
 }
 
 // remove containers already loaded
@@ -62,12 +74,16 @@ function lazyLoadImages() {
     if(elementInViewport(currentContainer)) {
       var placeholder = currentContainer.querySelector('img')
       var image = createImage(placeholder)
+      var hoverImage = createImage(placeholder, 'hover')
 
       lazyContainers = filterContainers(lazyContainers, currentContainer)
 
       image.onload = function () {
         placeholder.parentNode.appendChild(image)
         placeholder.classList.remove('is-paused')
+
+        if(hoverImage)
+          placeholder.parentNode.appendChild(hoverImage)
 
         placeholder.addEventListener('animationend', function() {
           image.classList.add('is-relative')
