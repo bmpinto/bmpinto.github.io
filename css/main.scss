@@ -18,6 +18,10 @@ $grey: #f2f2f2;
 $blue: #1e91d6;
 $purple: #a4bed7;
 
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1024px;
+$site-max-width: 1280px;
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -222,14 +226,14 @@ ul {
   overflow: hidden;
 }
 
+.section {
+  padding: 45px 30px;
+}
+
 .container {
   position: relative;
   max-width: 260px;
   margin: 0 auto;
-}
-
-.section {
-  padding: 45px 30px;
 }
 
 .section.profile,
@@ -271,6 +275,7 @@ ul {
     transform: translateY(-50%);
     background-image: url(../img/sprite_xl.svg);
     background-size: 378px 70px;
+    background-repeat: no-repeat;
   }
 }
 
@@ -928,7 +933,43 @@ ul {
   &.email:before { background-position: 1470px 182px; }
 }
 
+@media (min-width: $tablet-breakpoint) {
+  .section { padding: 60px; }
+  .container { max-width: 648px; }
 
+  .section-title {
+    font-size: 35px;
+    padding-left: 95px;
+    margin-bottom: 80px;
+
+    &:before {
+      width: 77px;
+      height: 77px;
+      background-size: 588px 120px;
+    }
+  }
+
+  .profile     .section-title:before { background-position: -170px -22px; }
+  .skills      .section-title:before { background-position: -512px -22px; }
+  .portfolio   .section-title:before { background-position: -84px -22px;  }
+  .tools       .section-title:before { background-position: -256px -22px; }
+  .education   .section-title:before { background-position: -341px -22px; }
+  .experience  .section-title:before { background-position: -427px -22px; }
+  .site-footer .section-title:before { background-position: 1px -22px;    }
+
+  .profile {
+    .intro {
+      float: left;
+      font-size: 18px;
+      width: 66.6%;
+      padding-right: 40px;
+    }
+
+    .image {
+      width: 33.3%;
+    }
+  }
+}
 
 /* ==========================================================================
    Helper classes
