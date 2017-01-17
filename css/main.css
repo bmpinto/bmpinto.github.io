@@ -509,9 +509,8 @@ ul {
       background-color: #d5af86; }
   .tools .chameleon {
     position: absolute;
-    bottom: -65px;
+    bottom: -185px;
     right: 0;
-    transform: translateY(88%);
     width: 235px; }
     .tools .chameleon .cls-1 {
       fill: #d5af86; }
@@ -529,7 +528,7 @@ ul {
    ========================================================================== */
 .education {
   padding-top: 140px; }
-  .education .extras-container {
+  .education .extras.container {
     padding-left: 35px; }
   .education .section-title:before {
     background-position: -220px -10px; }
@@ -664,9 +663,8 @@ ul {
     display: inline-block; }
   .experience .chameleon {
     position: absolute;
-    bottom: -95px;
-    right: 0;
-    transform: translate(83%, 40%);
+    bottom: -213px;
+    right: -436px;
     width: 530px; }
     .experience .chameleon .cls-1 {
       fill: #ff9b6d; }
@@ -808,7 +806,177 @@ ul {
   .skills .chameleon {
     width: 136px;
     bottom: -47px;
-    right: 100px; } }
+    right: 100px; }
+  .portfolio .list {
+    display: flex;
+    flex-flow: row wrap; }
+  .portfolio .item {
+    width: calc(50% - 20px); }
+    .portfolio .item:nth-child(even) {
+      margin-left: 40px; }
+  .portfolio .item-title {
+    font-size: 20px; }
+  .portfolio .item-description {
+    font-size: 14px; }
+  .portfolio .quote {
+    width: 420px;
+    font-size: 15px; }
+    .portfolio .quote:before {
+      left: auto;
+      right: -30px;
+      bottom: 40px; }
+    .portfolio .quote:after {
+      left: auto;
+      right: -30px;
+      bottom: 24px;
+      height: 54px;
+      transform: rotate(90deg); }
+    .portfolio .quote p:after {
+      left: auto;
+      right: -27px;
+      bottom: 29px;
+      height: 48px;
+      width: 20px; }
+  .portfolio .chameleon {
+    bottom: -375px;
+    right: -215px;
+    width: 415px; }
+  .section.tools {
+    padding-bottom: 97px; }
+  .tools .list {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 18px; }
+  .tools .item {
+    width: calc(50% - 20px); }
+    .tools .item:nth-child(even) {
+      margin-left: 40px; }
+  .tools .item-rating {
+    padding-left: 30px; }
+    .tools .item-rating span {
+      width: 11px;
+      height: 11px;
+      margin-left: 3px; }
+  .tools .quote {
+    font-size: 15px; }
+    .tools .quote:before {
+      left: 330px;
+      bottom: -135px;
+      height: 135px;
+      transform: rotate(-25deg); }
+    .tools .quote:after {
+      left: 353px;
+      bottom: -128px;
+      height: 128px;
+      transform: rotate(-5deg); }
+    .tools .quote p:after {
+      left: 276px;
+      width: 45px; }
+  .tools .chameleon {
+    bottom: -245px;
+    right: -40px;
+    width: 315px; }
+  .education .bachelor.wrapper {
+    padding-left: 115px; }
+  .education .item {
+    width: 535px;
+    margin-bottom: 75px; }
+  .education .heading {
+    margin-bottom: 32px; }
+  .education .extras .heading {
+    margin-bottom: 53px; }
+  .education .heading,
+  .education .description {
+    font-size: 19px; }
+  .education .title,
+  .education .description li {
+    padding: 20px 75px 20px 50px; }
+  .education .title {
+    font-size: 24px; }
+    .education .title:before {
+      background-position: 413px 177px;
+      background-size: 1380px 330px;
+      width: 25px;
+      height: 25px;
+      top: 18px;
+      left: 12px; }
+  .education .description li:before {
+    background-size: 1380px 330px;
+    top: 13px;
+    left: 13px;
+    width: 25px;
+    height: 25px; }
+  .education .description li:nth-child(1):before {
+    background-position: 339px 177px; }
+  .education .description li:nth-child(2):before {
+    background-position: 275px 177px; }
+  .education .description li:nth-child(3):before {
+    background-position: 203px 177px; }
+  .education .description li:nth-child(4):before {
+    background-position: 137px 180px; }
+  .education .description li:last-child {
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 1px; }
+  .education .extras.container {
+    padding-left: 20px; }
+  .education .courses {
+    -webkit-columns: 190px 3;
+    -moz-columns: 190px 3;
+    columns: 190px 3; }
+  .education .course {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    display: inline-block;
+    display: inline-block;
+    width: 100%; }
+  .experience .first.card {
+    margin-left: 115px; }
+  .experience .card {
+    width: 535px;
+    margin-bottom: 80px; }
+  .experience .list {
+    font-size: 20px; }
+  .experience .item {
+    padding: 27px 25px 23px 123px; }
+    .experience .item:before {
+      width: 35px;
+      height: 35px;
+      left: 45px;
+      top: 42px; }
+    .experience .item:before {
+      background-size: 1770px 330px; }
+    .experience .item:nth-child(1):before {
+      background-position: 133px 182px; }
+    .experience .item:nth-child(2):before {
+      background-size: 1890px 330px;
+      background-position: 423px 182px; }
+    .experience .item:nth-child(3):before {
+      background-position: 220px 182px; }
+  .experience .chameleon {
+    bottom: -210px;
+    right: -495px;
+    width: 709px; }
+  .section.site-footer {
+    padding-top: 80px; }
+  .site-footer .section-title {
+    width: 420px; }
+    .site-footer .section-title:before {
+      top: 30px; }
+  .site-footer .container {
+    display: flex;
+    flex-flow: row wrap; }
+  .site-footer .note {
+    font-size: 17px;
+    flex: 1; }
+  .contacts {
+    display: flex;
+    width: 100%; }
+    .contacts a {
+      width: calc(50% - 20px); }
+    .contacts .email {
+      margin-left: 40px; } }
 
 /* ==========================================================================
    Helper classes
