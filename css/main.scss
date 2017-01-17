@@ -1271,7 +1271,10 @@ ul {
     display: flex;
     width: 100%;
 
-    a { width: calc(50% - 20px); }
+    a {
+      font-size: 25px;
+      width: calc(50% - 20px);
+    }
     .email { margin-left: 40px; }
   }
 }

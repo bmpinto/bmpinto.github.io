@@ -974,6 +974,7 @@ ul {
     display: flex;
     width: 100%; }
     .contacts a {
+      font-size: 25px;
       width: calc(50% - 20px); }
     .contacts .email {
       margin-left: 40px; } }
