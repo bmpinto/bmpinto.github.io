@@ -1,21 +1,62 @@
-function runScroll() {
-  scrollTo(document.body, 0, 600);
-}
-var scrollme;
-scrollme = document.querySelector("#logo");
-scrollme.addEventListener("click",runScroll,false)
+// first add raf shim
+// http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
+window.requestAnimFrame = (function(){
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          function( callback ){
+            window.setTimeout(callback, 1000 / 60)
+          }
+})()
 
-function scrollTo(element, to, duration) {
-  if (duration <= 0) return;
-  var difference = to - element.scrollTop;
-  var perTick = difference / duration * 10;
+// main function
+function scrollToY(scrollTargetY, offset) {
+  var scrollY = window.scrollY || document.documentElement.scrollTop
+  var scrollTargetY = scrollTargetY || 0
+  var currentTime = 0
+  var time = Math.max(.1, Math.min(Math.abs(scrollY - scrollTargetY), .4))
 
-  setTimeout(function() {
-    element.scrollTop = element.scrollTop + perTick;
-    if (element.scrollTop == to) return;
-    scrollTo(element, to, duration - 10);
-  }, 10);
+  // easing equations from https://github.com/danro/easing-js/blob/master/easing.js
+  // add animation loop
+  function tick() {
+    currentTime += 1 / 60
+
+    var p = currentTime / time
+    var t = -0.5 * (Math.cos(Math.PI * p) - 1)
+
+    if (p < 1) {
+      requestAnimFrame(tick)
+      window.scrollTo(0, scrollY + ((scrollTargetY - scrollY) * t))
+    } else
+      window.scrollTo(0, scrollTargetY)
+  }
+
+  tick()
 }
+
+function scrollToSection(elementRef) {
+  var siteHeader = document.querySelector('.site-header')
+  var siteHeaderStyle = window.getComputedStyle(siteHeader, null)
+  var siteHeaderHeight = siteHeaderStyle.getPropertyValue('height')
+  var parsetSiteHeaderHeight = parseInt(siteHeaderHeight, 10)
+  var element = document.querySelector(elementRef)
+  var elementStyle = window.getComputedStyle(element, null)
+  var elementOffset = elementStyle.getPropertyValue('padding-top')
+  var elementContainer = element.querySelector('.container')
+  var parsedElementOffset = parseInt(elementOffset, 10)
+  var totalOffset = elementContainer.offsetTop - parsetSiteHeaderHeight - parsedElementOffset
+  scrollToY(totalOffset)
+}
+
+var menuItems = document.querySelectorAll('.main-nav a')
+;[].forEach.call(menuItems, function(item){
+  item.addEventListener('click', function(e) {
+    e.preventDefault()
+    var itemRef = item.getAttribute('href')
+    scrollToSection(itemRef)
+    window.location.hash = itemRef
+  })
+})
 
 var menuTrigger = document.querySelector('.menu-trigger')
 
@@ -54,7 +95,7 @@ function getImageAttributes(attributes, source) {
   image.setAttribute('height', attributes.height)
   image.setAttribute('width', attributes.width)
 
-  return image;
+  return image
 }
 
 function canCreateSourceImage(image, source) {
@@ -115,6 +156,7 @@ function lazyLoadImages() {
 
 var lazy = document.querySelectorAll('.lazy')
 var lazyContainers = []
+
 ;[].forEach.call(lazy, function(container) {
   return lazyContainers.push(container)
 })
