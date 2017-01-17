@@ -293,6 +293,7 @@ ul {
     padding-bottom: 15px;
     margin: 0;
     text-align: center;
+    font-size: 17px;
     font-weight: normal; }
   .skills .card-list {
     background-color: #d5af86;
@@ -759,7 +760,55 @@ ul {
     width: 66.6%;
     padding-right: 40px; }
   .profile .image {
-    width: 33.3%; } }
+    width: 33.3%; }
+  .section.skills {
+    padding-bottom: 75px; }
+  .skills .card,
+  .skills .highlight,
+  .skills .quote {
+    float: left;
+    width: calc(50% - 20px); }
+  .skills .card:nth-child(even),
+  .skills .highlight,
+  .skills .quote {
+    margin-left: 40px; }
+  .skills .card {
+    margin-bottom: 40px; }
+    .skills .card:nth-child(2n + 1) {
+      clear: both; }
+  .skills .card-title {
+    font-size: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px; }
+  .skills .card-list {
+    font-size: 17px;
+    padding-top: 41px;
+    padding-bottom: 41px; }
+  .skills .highlight {
+    font-size: 16px;
+    padding: 15px 25px; }
+  .skills .quote {
+    margin-top: 20px;
+    font-size: 15px; }
+    .skills .quote:before {
+      right: 86px;
+      bottom: -85px;
+      height: 85px;
+      transform: none; }
+    .skills .quote:after {
+      right: 65px;
+      bottom: -89px;
+      height: 93px;
+      transform: rotate(27deg); }
+    .skills .quote p:after {
+      right: 22px;
+      bottom: -27px;
+      height: 20px;
+      width: 38px; }
+  .skills .chameleon {
+    width: 136px;
+    bottom: -47px;
+    right: 100px; } }
 
 /* ==========================================================================
    Helper classes

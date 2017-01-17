@@ -387,6 +387,7 @@ ul {
     padding-bottom: 15px;
     margin: 0;
     text-align: center;
+    font-size: 17px;
     font-weight: normal;
   }
 
@@ -965,8 +966,76 @@ ul {
       padding-right: 40px;
     }
 
-    .image {
-      width: 33.3%;
+    .image { width: 33.3%; }
+  }
+
+  .section.skills { padding-bottom: 75px; }
+  .skills {
+    .card,
+    .highlight,
+    .quote {
+      float: left;
+      width: calc(50% - 20px);
+    }
+
+    .card:nth-child(even),
+    .highlight,
+    .quote {
+      margin-left: 40px;
+    }
+
+    .card {
+      margin-bottom: 40px;
+      &:nth-child(2n + 1) { clear: both; }
+    }
+
+    .card-title {
+      font-size: 20px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    .card-list {
+      font-size: 17px;
+      padding-top: 41px;
+      padding-bottom: 41px;
+    }
+
+    .highlight {
+      font-size: 16px;
+      padding: 15px 25px;
+    }
+
+    .quote {
+      margin-top: 20px;
+      font-size: 15px;
+
+      &:before {
+        right: 86px;
+        bottom: -85px;
+        height: 85px;
+        transform: none;
+      }
+
+      &:after {
+        right: 65px;
+        bottom: -89px;
+        height: 93px;
+        transform: rotate(27deg);
+      }
+
+      p:after {
+        right: 22px;
+        bottom: -27px;
+        height: 20px;
+        width: 38px;
+      }
+    }
+
+    .chameleon {
+      width: 136px;
+      bottom: -47px;
+      right: 100px;
     }
   }
 }
