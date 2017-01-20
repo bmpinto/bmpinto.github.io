@@ -482,7 +482,7 @@ ul {
       border: 1px solid #000;
       width: 10px;
       height: 10px; }
-    .tools .item-rating.one span:last-child,
+    .tools .item-rating.one span:nth-last-child(-n+4),
     .tools .item-rating.two span:nth-last-child(-n+3),
     .tools .item-rating.three span:nth-last-child(-n+2),
     .tools .item-rating.four span:nth-last-child(-n+2) {
@@ -755,10 +755,10 @@ ul {
   .profile .intro {
     float: left;
     font-size: 18px;
-    width: 66.6%;
+    width: 420px;
     padding-right: 40px; }
   .profile .image {
-    width: 33.3%; }
+    width: 190px; }
   .section.skills {
     padding-bottom: 75px; }
   .skills .card,
@@ -811,7 +811,7 @@ ul {
     display: flex;
     flex-flow: row wrap; }
   .portfolio .item {
-    width: calc(50% - 20px); }
+    width: 304px; }
     .portfolio .item:nth-child(even) {
       margin-left: 40px; }
   .portfolio .item-title {
@@ -978,6 +978,164 @@ ul {
       width: calc(50% - 20px); }
     .contacts .email {
       margin-left: 40px; } }
+
+@media (min-width: 1280px) {
+  body {
+    padding-top: 75px; }
+  .site-header {
+    height: 75px;
+    padding: 0 18px; }
+  #logo {
+    font-size: 18px; }
+  .menu-trigger {
+    display: none; }
+  .menu {
+    display: block;
+    padding: 5px 0 0 0;
+    position: relative;
+    background: none;
+    max-height: none;
+    height: auto;
+    width: auto;
+    top: auto; }
+  .main-nav {
+    display: inline-block;
+    vertical-align: top;
+    font-family: "Hind", sans-serif;
+    font-size: 17px; }
+    .main-nav a {
+      display: inline-block; }
+      .main-nav a:hover, .main-nav a:focus {
+        color: #d5af86; }
+    .main-nav a + a {
+      margin-top: 0;
+      margin-left: 25px; }
+  .social-nav {
+    display: inline-block;
+    margin-left: 65px;
+    vertical-align: top;
+    line-height: 1; }
+  .section {
+    padding: 120px 90px; }
+  .container {
+    max-width: 1100px; }
+  .section-title {
+    font-size: 50px;
+    padding-left: 150px;
+    margin-bottom: 130px; }
+    .section-title:before {
+      width: 120px;
+      height: 120px;
+      background-size: 918px 120px; }
+  .profile .section-title:before {
+    background-position: -266px 0; }
+  .skills .section-title:before {
+    background-position: -802px 0; }
+  .portfolio .section-title:before {
+    background-position: -134px 0; }
+  .tools .section-title:before {
+    background-position: -396px 0; }
+  .education .section-title:before {
+    background-position: -533px 0; }
+  .experience .section-title:before {
+    background-position: -667px 0; }
+  .site-footer .section-title:before {
+    top: 43px;
+    background-position: 1px 0; }
+  .profile .intro {
+    font-size: 27px;
+    width: 718px; }
+  .profile .image {
+    width: 238px; }
+  .section.skills {
+    padding-bottom: 125px; }
+  .skills .cards {
+    display: flex;
+    flex-flow: row wrap; }
+  .skills .card {
+    float: none;
+    width: 333px;
+    margin-bottom: 50px; }
+    .skills .card:nth-child(2n+1) {
+      clear: none; }
+  .skills .card + .card {
+    margin-left: 50px; }
+  .skills .card-title {
+    font-size: 26px;
+    padding-top: 30px;
+    padding-bottom: 30px; }
+  .skills .card-list {
+    font-size: 20px;
+    padding-top: 41px;
+    padding-bottom: 41px; }
+  .skills .highlight,
+  .skills .quote {
+    float: left; }
+  .skills .highlight {
+    margin-left: 0;
+    width: 334px;
+    font-size: 17px;
+    padding-top: 40px;
+    padding-bottom: 35px; }
+  .skills .quote {
+    margin-top: 0;
+    margin-left: 50px;
+    width: 716px;
+    font-size: 18px;
+    padding: 19px 70px 18px 25px; }
+    .skills .quote:before {
+      right: 200px;
+      bottom: -79px;
+      height: 88px;
+      transform: rotate(40deg); }
+    .skills .quote:after {
+      right: 175px;
+      bottom: -97px;
+      height: 125px;
+      transform: rotate(57deg); }
+    .skills .quote p:after {
+      right: 57px;
+      bottom: -21px;
+      width: 45px; }
+  .skills .chameleon {
+    width: 181px;
+    bottom: -90px;
+    right: 243px; }
+  .section.portfolio {
+    padding-bottom: 60px; }
+  .portfolio .item {
+    width: 333px;
+    margin-bottom: 60px; }
+    .portfolio .item:nth-child(even) {
+      margin-left: auto; }
+    .portfolio .item:nth-child(2), .portfolio .item:nth-child(5) {
+      margin-left: 50px;
+      margin-right: 50px; }
+  .portfolio .item-title {
+    font-size: 23px; }
+  .portfolio .item-description {
+    font-size: 16px; }
+  .portfolio .quote {
+    width: 718px;
+    font-size: 18px; }
+    .portfolio .quote:before {
+      right: -52px;
+      bottom: 53px;
+      height: 100px;
+      transform: rotate(-85deg); }
+    .portfolio .quote:after {
+      right: -53px;
+      bottom: 34px;
+      height: 102px;
+      transform: rotate(75deg); }
+    .portfolio .quote p:after {
+      right: -27px;
+      bottom: 46px;
+      height: 35px; }
+  .portfolio .chameleon {
+    bottom: -465px;
+    right: -255px;
+    width: 545px; } }
 
 /* ==========================================================================
    Helper classes

@@ -14,7 +14,7 @@ function scrollToY(scrollTargetY, offset) {
   var scrollY = window.scrollY || document.documentElement.scrollTop
   var scrollTargetY = scrollTargetY || 0
   var currentTime = 0
-  var time = Math.max(.1, Math.min(Math.abs(scrollY - scrollTargetY), .4))
+  var time = Math.max(.1, Math.min(Math.abs(scrollY - scrollTargetY), .6))
 
   // easing equations from https://github.com/danro/easing-js/blob/master/easing.js
   // add animation loop
@@ -65,13 +65,30 @@ menuTrigger.addEventListener('click', function() {
   this.classList.toggle('triggered')
 })
 
+function closest(el, selector) {
+  var matchesSelector =
+    el.matches
+    || el.webkitMatchesSelector
+    || el.mozMatchesSelector
+    || el.msMatchesSelector
+
+  while (el) {
+    if (matchesSelector.call(el, selector))
+      break
+    el = el.parentElement
+  }
+
+  return el
+}
+
 function elementInViewport(element) {
   var rect = element.getBoundingClientRect()
+  var closestElement = closest(element, '.section')
+  var previousSibling =  closestElement.previousElementSibling
+  var offset = previousSibling ? previousSibling.offsetTop : 0
 
-  return (
-    rect.top >= 0 && rect.left >= 0 &&
-    rect.top <= (window.innerHeight || document.documentElement.clientHeight)
-  )
+  return rect.top >= 0 && rect.left >= 0 &&
+    rect.top - offset <= (window.innerHeight || document.documentElement.clientHeight)
 }
 
 function setImageAttributes(placeholder, source) {
@@ -161,4 +178,5 @@ var lazyContainers = []
   return lazyContainers.push(container)
 })
 window.addEventListener('scroll', lazyLoadImages)
+window.addEventListener('load', lazyLoadImages)
 
