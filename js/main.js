@@ -53,6 +53,12 @@ var menuItems = document.querySelectorAll('.main-nav a')
   item.addEventListener('click', function(e) {
     e.preventDefault()
     var itemRef = item.getAttribute('href')
+    var actives = item.parentNode.querySelectorAll('.active')
+    item.classList.add('active')
+    ;[].forEach.call(actives, function(active) {
+      if(active != item)
+        active.classList.remove('active')
+    })
     scrollToSection(itemRef)
     window.location.hash = itemRef
   })

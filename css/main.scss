@@ -157,11 +157,19 @@ ul {
 
 .main-nav {
   a {
-    display: block;
+    display: inline-block;
+    line-height: 1;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: #fff;
+    }
+
+    &:focus,
+    &:active,
+    &.active {
+      border-bottom: 2px solid #fff;
     }
   }
 
@@ -1320,9 +1328,15 @@ ul {
     a {
       display: inline-block;
 
-      &:hover,
-      &:focus {
+      &:hover {
         color: $brown;
+        border: none;
+      }
+
+      &:focus,
+      &:active,
+      &.active {
+        border-bottom: 2px solid $yellow;
       }
     }
 
