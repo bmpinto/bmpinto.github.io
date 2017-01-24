@@ -10,7 +10,7 @@ window.requestAnimFrame = (function(){
 })()
 
 // main function
-function scrollToY(scrollTargetY, offset) {
+function scrollToY(scrollTargetY, elementRef) {
   var scrollY = window.scrollY || document.documentElement.scrollTop
   var scrollTargetY = scrollTargetY || 0
   var currentTime = 0
@@ -27,8 +27,14 @@ function scrollToY(scrollTargetY, offset) {
     if (p < 1) {
       requestAnimFrame(tick)
       window.scrollTo(0, scrollY + ((scrollTargetY - scrollY) * t))
-    } else
+    } else {
       window.scrollTo(0, scrollTargetY)
+      var el = document.getElementById(elementRef.replace('#',''));
+      var id = el.id;
+      el.removeAttribute('id');
+      window.location.hash = elementRef;
+      el.setAttribute('id',id);
+    }
   }
 
   tick()
@@ -45,25 +51,8 @@ function scrollToSection(elementRef) {
   var elementContainer = element.querySelector('.container')
   var parsedElementOffset = parseInt(elementOffset, 10)
   var totalOffset = elementContainer.offsetTop - parsetSiteHeaderHeight - parsedElementOffset
-  scrollToY(totalOffset)
+  scrollToY(totalOffset, elementRef)
 }
-
-var menuItems = document.querySelectorAll('.main-nav a')
-;[].forEach.call(menuItems, function(item){
-  item.addEventListener('click', function(e) {
-    e.preventDefault()
-    var itemRef = item.getAttribute('href')
-    scrollToSection(itemRef)
-    window.location.hash = itemRef
-  })
-})
-
-var menuTrigger = document.querySelector('.menu-trigger')
-
-menuTrigger.addEventListener('click', function() {
-  this.innerText = this.classList.contains('triggered') ? 'menu' : 'fechar'
-  this.classList.toggle('triggered')
-})
 
 function closest(el, selector) {
   var matchesSelector =
@@ -171,12 +160,69 @@ function lazyLoadImages() {
   })
 }
 
+function scroll() {
+  lazyLoadImages()
+
+  var siteHeader = document.querySelector('.site-header')
+  var siteHeaderStyle = window.getComputedStyle(siteHeader, null)
+  var siteHeaderHeight = parseInt(siteHeaderStyle.getPropertyValue('height'), 10)
+  var mainNav = document.querySelector('.main-nav')
+  var fromTop = (document.documentElement.scrollTop || document.body.scrollTop) + siteHeaderHeight + 1
+  var currentSectionId = scrollItems.filter(function(item) {
+    if(item.offsetTop < fromTop)
+      return item.id
+  })
+
+  if(window.innerHeight + window.scrollY === document.documentElement.offsetHeight) {
+    var item = mainNav.querySelector('a:last-child')
+    var itemRef = item.getAttribute('href')
+    currentSectionId.push(document.querySelector(itemRef))
+  }
+  
+  currentSectionId = currentSectionId[currentSectionId.length - 1]
+  var id = currentSectionId.id
+  var lastId
+  
+  if(lastId !== id) {
+    lastId = id
+    var el = mainNav.querySelector('[href="#'+ id +'"]')
+    el.classList.add('active')
+    var actives = mainNav.querySelectorAll('.active')
+    ;[].forEach.call(actives, function(active) {
+      if(active != el)
+        active.classList.remove('active')
+    })
+  }
+}
+
 var lazy = document.querySelectorAll('.lazy')
+var menuItems = document.querySelectorAll('.main-nav a')
+var menuTrigger = document.querySelector('.menu-trigger')
 var lazyContainers = []
+var scrollItems = []
+
+;[].forEach.call(menuItems, function(item){
+  var itemRef = item.getAttribute('href')
+  scrollItems.push(document.querySelector(itemRef))
+})
 
 ;[].forEach.call(lazy, function(container) {
   return lazyContainers.push(container)
 })
-window.addEventListener('scroll', lazyLoadImages)
+
+;[].forEach.call(menuItems, function(item){
+  item.addEventListener('click', function(e) {
+    e.preventDefault()
+    var itemRef = item.getAttribute('href')
+    scrollToSection(itemRef)
+  })
+})
+
+menuTrigger.addEventListener('click', function() {
+  this.innerText = this.classList.contains('triggered') ? 'menu' : 'fechar'
+  this.classList.toggle('triggered')
+})
+
+window.addEventListener('scroll', scroll)
 window.addEventListener('load', lazyLoadImages)
 

@@ -58,7 +58,22 @@ ul {
   text-decoration: none;
   letter-spacing: 1px;
   color: #353330;
-  padding-left: 45px; }
+  padding-left: 45px;
+  position: relative; }
+  #logo:before {
+    content: "";
+    background-image: url(../img/sprite.svg);
+    position: absolute;
+    left: 15px;
+    width: 25px;
+    height: 25px;
+    background-size: 1149px 310px;
+    background-position: -100px 167px;
+    top: -2px; }
+  #logo:hover:before, #logo:focus:before {
+    background-position: -131px 167px; }
+  #logo:active:before {
+    background-position: -162px 167px; }
 
 #logo,
 .menu-trigger {
@@ -123,9 +138,9 @@ ul {
   line-height: 1;
   padding-bottom: 2px;
   border-bottom: 2px solid transparent; }
-  .main-nav a:hover {
+  .main-nav a:hover, .main-nav a:focus {
     color: #fff; }
-  .main-nav a:focus, .main-nav a:active, .main-nav a.active {
+  .main-nav a.active {
     border-bottom: 2px solid #fff; }
 
 .main-nav a + a {
@@ -726,9 +741,9 @@ ul {
     background-image: url(../img/sprite.svg);
     background-size: 1400px 113px; }
   .contacts a.tel:before {
-    background-position: 1435px 182px; }
-  .contacts a.email:before {
     background-position: 1470px 182px; }
+  .contacts a.email:before {
+    background-position: 1435px 182px; }
 
 @media (min-width: 768px) {
   .section {
@@ -770,7 +785,7 @@ ul {
   .skills .highlight,
   .skills .quote {
     float: left;
-    width: calc(50% - 20px); }
+    width: 304px; }
   .skills .card:nth-child(even),
   .skills .highlight,
   .skills .quote {
@@ -853,7 +868,7 @@ ul {
     flex-flow: row wrap;
     font-size: 18px; }
   .tools .item {
-    width: calc(50% - 20px); }
+    width: 304px; }
     .tools .item:nth-child(even) {
       margin-left: 40px; }
   .tools .item-rating {
@@ -905,24 +920,26 @@ ul {
       height: 25px;
       top: 18px;
       left: 12px; }
-  .education .description li:before {
-    background-size: 1380px 330px;
-    top: 13px;
-    left: 13px;
-    width: 25px;
-    height: 25px; }
-  .education .description li:nth-child(1):before {
-    background-position: 339px 177px; }
-  .education .description li:nth-child(2):before {
-    background-position: 275px 177px; }
-  .education .description li:nth-child(3):before {
-    background-position: 203px 177px; }
-  .education .description li:nth-child(4):before {
-    background-position: 137px 180px; }
-  .education .description li:last-child {
-    font-size: 13px;
-    line-height: 22px;
-    letter-spacing: 1px; }
+  .education .description li {
+    line-height: 1; }
+    .education .description li:before {
+      background-size: 1380px 330px;
+      top: 13px;
+      left: 13px;
+      width: 25px;
+      height: 25px; }
+    .education .description li:nth-child(1):before {
+      background-position: 339px 177px; }
+    .education .description li:nth-child(2):before {
+      background-position: 275px 177px; }
+    .education .description li:nth-child(3):before {
+      background-position: 203px 177px; }
+    .education .description li:nth-child(4):before {
+      background-position: 137px 180px; }
+    .education .description li:last-child {
+      font-size: 13px;
+      line-height: 22px;
+      letter-spacing: 1px; }
   .education .extras.container {
     padding-left: 20px; }
   .education .courses {
@@ -980,7 +997,7 @@ ul {
     width: 100%; }
     .contacts a {
       font-size: 25px;
-      width: calc(50% - 20px); }
+      width: 304px; }
     .contacts .email {
       margin-left: 40px; } }
 
@@ -989,13 +1006,26 @@ ul {
     padding-top: 75px; }
   .site-header {
     height: 75px;
-    padding: 0 18px; }
+    padding: 0 30px; }
   #logo {
     font-size: 18px; }
+    #logo:before {
+      width: 45px;
+      height: 40px;
+      background-size: 1900px 310px;
+      background-position: -165px 175px;
+      left: 0;
+      top: -5px; }
+    #logo:hover:before, #logo:focus:before {
+      background-position: -217px 175px; }
+    #logo:active:before {
+      background-position: -269px 175px; }
   .menu-trigger {
     display: none; }
   .menu {
-    display: block;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
     padding: 5px 0 0 0;
     position: relative;
     background: none;
@@ -1010,10 +1040,10 @@ ul {
     font-size: 17px; }
     .main-nav a {
       display: inline-block; }
-      .main-nav a:hover {
+      .main-nav a:hover, .main-nav a:focus {
         color: #d5af86;
         border: none; }
-      .main-nav a:focus, .main-nav a:active, .main-nav a.active {
+      .main-nav a.active {
         border-bottom: 2px solid #fbd37c; }
     .main-nav a + a {
       margin-top: 0;
@@ -1023,6 +1053,28 @@ ul {
     margin-left: 65px;
     vertical-align: top;
     line-height: 1; }
+    .social-nav a {
+      background-size: 2020px 310px;
+      width: 38px;
+      height: 37px; }
+      .social-nav a.linkedin {
+        background-position: -340px 173px; }
+        .social-nav a.linkedin:hover, .social-nav a.linkedin:focus {
+          background-position: -390px 173px; }
+        .social-nav a.linkedin:active {
+          background-position: -440px 173px; }
+      .social-nav a.behance {
+        background-position: -489px 173px; }
+        .social-nav a.behance:hover, .social-nav a.behance:focus {
+          background-position: -539px 173px; }
+        .social-nav a.behance:active {
+          background-position: -589px 173px; }
+      .social-nav a.dribbble {
+        background-position: -638px 173px; }
+        .social-nav a.dribbble:hover, .social-nav a.dribbble:focus {
+          background-position: -688px 173px; }
+        .social-nav a.dribbble:active {
+          background-position: -738px 173px; }
   .section {
     padding: 120px 90px; }
   .container {
@@ -1143,7 +1195,156 @@ ul {
   .portfolio .chameleon {
     bottom: -465px;
     right: -255px;
-    width: 545px; } }
+    width: 545px; }
+  .section.tools {
+    padding-bottom: 80px; }
+  .tools .list {
+    font-size: 19px; }
+  .tools .item {
+    width: 333px;
+    margin-left: 50px; }
+    .tools .item:nth-child(even) {
+      margin-left: 50px; }
+    .tools .item:first-child, .tools .item:nth-child(3n+4) {
+      margin-left: 0; }
+  .tools .quote {
+    margin-top: 90px;
+    width: 718px;
+    float: right; }
+    .tools .quote:before {
+      left: 228px;
+      bottom: -167px;
+      height: 182px;
+      transform: rotate(-35deg); }
+    .tools .quote:after {
+      left: 250px;
+      bottom: -156px;
+      height: 162px;
+      transform: rotate(-22deg); }
+    .tools .quote p:after {
+      left: 153px;
+      width: 43px; }
+  .tools .chameleon {
+    width: 420px;
+    right: 20px;
+    bottom: -285px; }
+  .education.section {
+    padding-bottom: 200px; }
+  .education .container > .container {
+    float: left;
+    width: 718px; }
+  .education .container > .extras.container {
+    float: right;
+    width: 238px; }
+  .education .bachelor.wrapper {
+    padding-left: 0; }
+  .education .heading {
+    font-size: 28px; }
+  .education .extras .heading {
+    margin-top: 11px;
+    margin-bottom: 37px;
+    font-size: 19px; }
+  .education .item {
+    width: 100%;
+    margin-bottom: 0; }
+  .education .wrapper + .wrapper {
+    margin-top: 150px; }
+  .education .title:before,
+  .education .description li:before {
+    background-size: 2230px 330px;
+    width: 45px;
+    height: 35px; }
+  .education .title {
+    font-size: 32px;
+    padding-top: 25px;
+    padding-bottom: 25px; }
+    .education .title:before {
+      background-position: 667px 182px;
+      left: 43px;
+      top: 22px; }
+  .education .description {
+    font-size: 25px; }
+    .education .description li {
+      padding-top: 25px;
+      padding-bottom: 20px; }
+      .education .description li:before {
+        top: 20px;
+        left: 43px; }
+      .education .description li:nth-child(1):before {
+        background-position: 549px 183px; }
+      .education .description li:nth-child(2):before {
+        background-position: 449px 183px; }
+      .education .description li:nth-child(3):before {
+        background-position: 331px 183px;
+        height: 40px; }
+      .education .description li:nth-child(4):before {
+        background-position: 225px 183px; }
+    .education .description li:last-child {
+      font-size: 18px;
+      line-height: 31px;
+      letter-spacing: 0; }
+  .education .title,
+  .education .description li {
+    padding: 25px 125px; }
+  .education .courses {
+    columns: auto auto; }
+  .education .course {
+    margin-bottom: 30px;
+    -webkit-column-break-inside: auto;
+    page-break-inside: auto;
+    break-inside: auto; }
+    .education .course .name,
+    .education .course .place {
+      font-size: 13px; }
+      .education .course .name:before,
+      .education .course .place:before {
+        background-size: 780px 310px;
+        width: 17px; }
+    .education .course .name:before {
+      background-position: 212px 161px; }
+    .education .course .place:before {
+      background-position: 136px 161px; }
+  .experience .first.card {
+    margin-left: 288px; }
+  .experience .card {
+    width: 718px; }
+  .experience .list {
+    font-size: 33px; }
+  .experience .item:before {
+    width: 45px;
+    height: 39px;
+    top: 50px; }
+  .experience .item:nth-child(1):before {
+    background-size: 2050px 330px;
+    background-position: 156px 184px; }
+  .experience .item:nth-child(2):before {
+    background-size: 2700px 330px;
+    background-position: 601px 184px;
+    top: 52px; }
+  .experience .item:nth-child(3):before {
+    background-size: 2100px 330px;
+    background-position: 264px 185px; }
+  .experience .chameleon {
+    width: 936px;
+    right: -653px;
+    bottom: -275px; }
+  .site-footer .container {
+    justify-content: space-between; }
+  .site-footer .note {
+    flex: initial;
+    width: 526px;
+    font-size: 22px; }
+  .site-footer .contacts a {
+    width: 718px;
+    font-size: 41px; }
+    .site-footer .contacts a:before {
+      width: 35px;
+      height: 35px;
+      background-size: 1950px 113px; }
+    .site-footer .contacts a.tel:before {
+      background-position: 2045px 187px; }
+    .site-footer .contacts a.email:before {
+      background-position: 1999px 187px; } }
 
 /* ==========================================================================
    Helper classes

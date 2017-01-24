@@ -83,6 +83,28 @@ ul {
   letter-spacing: 1px;
   color: $text-color;
   padding-left: 45px;
+  position: relative;
+
+  &:before {
+    content: "";
+    background-image: url(../img/sprite.svg);
+    position: absolute;
+    left: 15px;
+    width: 25px;
+    height: 25px;
+    background-size: 1149px 310px;
+    background-position: -100px 167px;
+    top: -2px;
+  }
+
+  &:hover:before,
+  &:focus:before {
+    background-position: -131px 167px;
+  }
+
+  &:active:before {
+    background-position: -162px 167px;
+  }
 }
 
 #logo,
@@ -162,12 +184,11 @@ ul {
     padding-bottom: 2px;
     border-bottom: 2px solid transparent;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: #fff;
     }
 
-    &:focus,
-    &:active,
     &.active {
       border-bottom: 2px solid #fff;
     }
@@ -938,8 +959,8 @@ ul {
     background-size: 1400px 113px;
   }
 
-  &.tel:before { background-position: 1435px 182px; }
-  &.email:before { background-position: 1470px 182px; }
+  &.tel:before { background-position: 1470px 182px; }
+  &.email:before { background-position: 1435px 182px; }
 }
 
 @media (min-width: $tablet-breakpoint) {
@@ -985,7 +1006,7 @@ ul {
     .highlight,
     .quote {
       float: left;
-      width: calc(50% - 20px);
+      width: 304px;
     }
 
     .card:nth-child(even),
@@ -1106,7 +1127,7 @@ ul {
     }
 
     .item {
-      width: calc(50% - 20px);
+      width: 304px;
       &:nth-child(even) { margin-left: 40px; }
     }
 
@@ -1183,7 +1204,8 @@ ul {
       }
     }
 
-    .description li{
+    .description li {
+      line-height: 1;
       &:before {
         background-size: 1380px 330px;
         top: 13px;
@@ -1284,7 +1306,7 @@ ul {
 
     a {
       font-size: 25px;
-      width: calc(50% - 20px);
+      width: 304px;
     }
     .email { margin-left: 40px; }
   }
@@ -1297,11 +1319,29 @@ ul {
 
   .site-header {
     height: 75px;
-    padding: 0 18px;
+    padding: 0 30px;
   }
 
   #logo {
     font-size: 18px;
+
+    &:before {
+      width: 45px;
+      height: 40px;
+      background-size: 1900px 310px;
+      background-position: -165px 175px;
+      left: 0;
+      top: -5px;
+    }
+
+    &:hover:before,
+    &:focus:before {
+      background-position: -217px 175px;
+    }
+
+    &:active:before {
+      background-position: -269px 175px;
+    }
   }
 
   .menu-trigger {
@@ -1309,7 +1349,9 @@ ul {
   }
 
   .menu {
-    display: block;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
     padding: 5px 0 0 0;
     position: relative;
     background: none;
@@ -1328,13 +1370,12 @@ ul {
     a {
       display: inline-block;
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: $brown;
         border: none;
       }
 
-      &:focus,
-      &:active,
       &.active {
         border-bottom: 2px solid $yellow;
       }
@@ -1351,6 +1392,51 @@ ul {
     margin-left: 65px;
     vertical-align: top;
     line-height: 1;
+
+    a {
+      background-size: 2020px 310px;
+      width: 38px;
+      height: 37px;
+
+      &.linkedin {
+        background-position: -340px 173px;
+
+        &:hover,
+        &:focus {
+          background-position: -390px 173px;
+        }
+
+        &:active {
+          background-position: -440px 173px;
+        }
+      }
+
+      &.behance {
+        background-position: -489px 173px;
+
+        &:hover,
+        &:focus {
+          background-position: -539px 173px;
+        }
+
+        &:active {
+          background-position: -589px 173px;
+        }
+      }
+
+      &.dribbble {
+        background-position: -638px 173px;
+
+        &:hover,
+        &:focus {
+          background-position: -688px 173px;
+        }
+
+        &:active {
+          background-position: -738px 173px;
+        }
+      }
+    }
   }
 
   .section {
@@ -1526,6 +1612,257 @@ ul {
       bottom: -465px;
       right: -255px;
       width: 545px;
+    }
+  }
+
+  .section.tools { padding-bottom: 80px; }
+  .tools {
+    .list {
+      font-size: 19px;
+    }
+
+    .item {
+      width: 333px;
+      margin-left: 50px;
+
+      &:nth-child(even) { margin-left: 50px; }
+      
+      &:first-child,
+      &:nth-child(3n+4) {
+        margin-left: 0;
+      }
+    }
+
+    .quote {
+      margin-top: 90px;
+      width: 718px;
+      float: right;
+
+      &:before {
+        left: 228px;
+        bottom: -167px;
+        height: 182px;
+        transform: rotate(-35deg);
+      }
+
+      &:after {
+        left: 250px;
+        bottom: -156px;
+        height: 162px;
+        transform: rotate(-22deg);
+      }
+
+      p:after {
+        left: 153px;
+        width: 43px;
+      }
+    }
+
+    .chameleon {
+      width: 420px;
+      right: 20px;
+      bottom: -285px;
+    }
+  }
+
+  .education.section { padding-bottom: 200px; }
+  .education {
+    .container > .container {
+      float: left;
+      width: 718px;
+    }
+
+    .container > .extras.container {
+      float: right;
+      width: 238px;
+    }
+
+    .bachelor.wrapper {
+      padding-left: 0;
+    }
+
+    .heading {
+      font-size: 28px;
+    }
+
+    .extras .heading {
+      margin-top: 11px;
+      margin-bottom: 37px;
+      font-size: 19px;
+    }
+
+    .item {
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    .wrapper + .wrapper {
+      margin-top: 150px;
+    }
+
+    .title:before,
+    .description li:before {
+      background-size: 2230px 330px;
+      width: 45px;
+      height: 35px;
+    }
+
+    .title {
+      font-size: 32px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+
+      &:before {
+        background-position: 667px 182px;
+        left: 43px;
+        top: 22px;
+      }
+    }
+
+    .description {
+      font-size: 25px;
+      
+      li {
+        padding-top: 25px;
+        padding-bottom: 20px;
+
+        &:before {
+          top: 20px;
+          left: 43px;
+        }
+
+        &:nth-child(1):before {
+          background-position: 549px 183px;
+        }
+
+        &:nth-child(2):before {
+          background-position: 449px 183px;
+        }
+
+        &:nth-child(3):before {
+          background-position: 331px 183px;
+          height: 40px;
+        }
+
+        &:nth-child(4):before {
+          background-position: 225px 183px;
+        }
+      }
+
+      li:last-child {
+        font-size: 18px;
+        line-height: 31px;
+        letter-spacing: 0;
+      }
+    }
+
+    .title,
+    .description li {
+      padding: 25px 125px;
+    }
+
+    .courses {
+      columns: auto auto;
+    }
+
+    .course {
+      margin-bottom: 30px;
+      -webkit-column-break-inside: auto;
+      page-break-inside: auto;
+      break-inside: auto;
+
+      .name,
+      .place {
+        font-size: 13px;
+
+        &:before {
+          background-size: 780px 310px;
+          width: 17px;
+        }
+      }
+
+      .name:before {
+        background-position: 212px 161px;
+      }
+
+      .place:before {
+        background-position: 136px 161px;
+      }
+    }
+  }
+
+  .experience {
+    .first.card {
+      margin-left: 288px;
+    }
+
+    .card {
+      width: 718px;
+    }
+
+    .list {
+      font-size: 33px;
+    }
+
+    .item {
+      &:before {
+        width: 45px;
+        height: 39px;
+        top: 50px;
+      }
+
+      &:nth-child(1):before {
+        background-size: 2050px 330px;
+        background-position: 156px 184px;
+      }
+
+      &:nth-child(2):before {
+        background-size: 2700px 330px;
+        background-position: 601px 184px;
+        top: 52px;
+      }
+
+      &:nth-child(3):before {
+        background-size: 2100px 330px;
+        background-position: 264px 185px;
+      }
+    }
+
+    .chameleon {
+      width: 936px;
+      right: -653px;
+      bottom: -275px;
+    }
+  }
+
+  .site-footer {
+    .container {
+      justify-content: space-between;
+    }
+
+    .note {
+      flex: initial;
+      width: 526px;
+      font-size: 22px;
+    }
+
+    .contacts a {
+      width: 718px;
+      font-size: 41px;
+
+      &:before {
+        width: 35px;
+        height: 35px;
+        background-size: 1950px 113px;
+      }
+
+      &.tel:before {
+        background-position: 2045px 187px;
+      }
+
+      &.email:before {
+        background-position: 1999px 187px; 
+      }
     }
   }
 }
