@@ -1312,35 +1312,36 @@ ul {
   }
 }
 
-@media (min-width: $large-desktop-breakpoint) {
+@media (min-width: $desktop-breakpoint) {
   body {
-    padding-top: 75px;
+    padding-top: 60px;
   }
 
   .site-header {
-    height: 75px;
-    padding: 0 30px;
+    height: 60px;
+    padding: 0 25px;
   }
 
   #logo {
-    font-size: 18px;
+    font-size: 15px;
+    padding-left: 38px;
 
     &:before {
-      width: 45px;
-      height: 40px;
-      background-size: 1900px 310px;
-      background-position: -165px 175px;
+      width: 30px;
+      height: 30px;
+      background-size: 1400px 310px;
+      background-position: -121px 170px;
       left: 0;
-      top: -5px;
+      top: -3px;
     }
 
     &:hover:before,
     &:focus:before {
-      background-position: -217px 175px;
+      background-position: -159px 170px;
     }
 
     &:active:before {
-      background-position: -269px 175px;
+      background-position: -197px 170px;
     }
   }
 
@@ -1365,7 +1366,7 @@ ul {
     display: inline-block;
     vertical-align: top;
     font-family: "Hind", sans-serif;
-    font-size: 17px;
+    font-size: 15px;
 
     a {
       display: inline-block;
@@ -1383,15 +1384,109 @@ ul {
 
     a + a {
       margin-top: 0;
-      margin-left: 25px;
+      margin-left: 15px;
     }
   }
 
   .social-nav {
     display: inline-block;
-    margin-left: 65px;
+    margin-left: 20px;
     vertical-align: top;
     line-height: 1;
+
+    a + a {
+      margin-left: 10px;
+    }
+
+    a {
+      background-size: 1620px 310px;
+      width: 29px;
+      height: 30px;
+
+      &.linkedin {
+        background-position: -273px 170px;
+
+        &:hover,
+        &:focus {
+          background-position: -313px 170px;
+        }
+
+        &:active {
+          background-position: -353px 170px;
+        }
+      }
+
+      &.behance {
+        background-position: -393px 170px;
+
+        &:hover,
+        &:focus {
+          background-position: -433px 170px;
+        }
+
+        &:active {
+          background-position: -473px 170px;
+        }
+      }
+
+      &.dribbble {
+        background-position: -513px 170px;
+
+        &:hover,
+        &:focus {
+          background-position: -553px 170px;
+        }
+
+        &:active {
+          background-position: -593px 170px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $large-desktop-breakpoint) {
+  body {
+    padding-top: 75px;
+  }
+
+  .site-header {
+    height: 75px;
+    padding: 0 30px;
+  }
+
+  #logo {
+    font-size: 18px;
+    padding-left: 50px;
+
+    &:before {
+      width: 45px;
+      height: 40px;
+      background-size: 1900px 310px;
+      background-position: -165px 175px;
+      top: -5px;
+    }
+
+    &:hover:before,
+    &:focus:before {
+      background-position: -217px 175px;
+    }
+
+    &:active:before {
+      background-position: -269px 175px;
+    }
+  }
+
+  .main-nav {
+    font-size: 17px;
+
+    a + a {
+      margin-left: 25px;
+    }
+  }
+
+  .social-nav {
+    margin-left: 65px;
 
     a {
       background-size: 2020px 310px;
