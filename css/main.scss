@@ -1317,6 +1317,10 @@ ul {
     padding-top: 60px;
   }
 
+  .container {
+    max-width: 716px;
+  }
+
   .site-header {
     height: 60px;
     padding: 0 25px;
@@ -1442,6 +1446,41 @@ ul {
         }
       }
     }
+  }
+
+  .profile {
+    .intro {
+      font-size: 20px;
+      width: 450px;
+    }
+
+    .image {
+      width: 210px;
+    }
+  }
+
+  .skills {
+    .card,
+    .highlight,
+    .quote {
+      width: 333px;
+    }
+
+   .card:nth-child(even),
+   .highlight,
+   .quote {
+    margin-left: 50px;
+   }
+
+   .card-title {
+    font-size: 26px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+   }
+
+   .card-list {
+      font-size: 20px;
+   }
   }
 }
 

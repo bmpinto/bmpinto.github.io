@@ -1004,6 +1004,8 @@ ul {
 @media (min-width: 1024px) {
   body {
     padding-top: 60px; }
+  .container {
+    max-width: 716px; }
   .site-header {
     height: 60px;
     padding: 0 25px; }
@@ -1077,7 +1079,26 @@ ul {
         .social-nav a.dribbble:hover, .social-nav a.dribbble:focus {
           background-position: -553px 170px; }
         .social-nav a.dribbble:active {
-          background-position: -593px 170px; } }
+          background-position: -593px 170px; }
+  .profile .intro {
+    font-size: 20px;
+    width: 450px; }
+  .profile .image {
+    width: 210px; }
+  .skills .card,
+  .skills .highlight,
+  .skills .quote {
+    width: 333px; }
+  .skills .card:nth-child(even),
+  .skills .highlight,
+  .skills .quote {
+    margin-left: 50px; }
+  .skills .card-title {
+    font-size: 26px;
+    padding-top: 30px;
+    padding-bottom: 30px; }
+  .skills .card-list {
+    font-size: 20px; } }
 
 @media (min-width: 1280px) {
   body {
