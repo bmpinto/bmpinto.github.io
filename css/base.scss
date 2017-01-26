@@ -110,9 +110,20 @@ ul {
   position: relative !important;
 }
 
+@media (min-width: $mobile-breakpoint) {
+  .container {
+    width: 306px;
+  }
+}
+
 @media (min-width: $tablet-breakpoint) {
-  .section { padding: 60px; }
-  .container { width: 648px; }
+  .section {
+    padding: 60px;
+  }
+
+  .container {
+    width: 648px;
+  }
 
   .section-title {
     font-size: 35px;

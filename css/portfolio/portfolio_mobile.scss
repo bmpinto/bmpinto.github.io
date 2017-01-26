@@ -1,0 +1,17 @@
+@media (min-width: $mobile-breakpoint) {
+  .portfolio {
+    .quote {
+      &:before {
+        left: 125px;
+      }
+
+      &:after {
+        left: 150px;
+      }
+
+      p:after {
+        left: 76px;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@media (min-width: $mobile-breakpoint) {
+  .tools {
+    .quote {
+      &:before {
+        left: 66px;
+        height: 113px;
+      }
+
+      &:after {
+        left: 80px;
+        height: 113px;
+      }
+
+      p:after {
+        left: 45px;
+        width: 26px;
+      }
+    }
+  }
+}

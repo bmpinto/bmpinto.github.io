@@ -7,6 +7,7 @@ $grey: #f2f2f2;
 $blue: #1e91d6;
 $purple: #a4bed7;
 
+$mobile-breakpoint: 480px;
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1024px;
 $large-desktop-breakpoint: 1280px;
@@ -33,12 +34,14 @@ $site-max-width: 1280px;
 
 // portfolio
 @import 'portfolio/portfolio';
+@import 'portfolio/portfolio_mobile';
 @import 'portfolio/portfolio_tablet';
 @import 'portfolio/portfolio_desktop';
 @import 'portfolio/portfolio_large_desktop';
 
 // tools
 @import 'tools/tools';
+@import 'tools/tools_mobile';
 @import 'tools/tools_tablet';
 @import 'tools/tools_desktop';
 @import 'tools/tools_large_desktop';
@@ -57,6 +60,7 @@ $site-max-width: 1280px;
 
 // footer
 @import 'footer/footer';
+@import 'footer/footer_mobile';
 @import 'footer/footer_tablet';
 @import 'footer/footer_desktop';
 @import 'footer/footer_large_desktop';
