@@ -1,0 +1,55 @@
+@media (min-width: $tablet-breakpoint) {
+  .portfolio {
+    padding-bottom: 80px;
+
+    .section-title:before {
+      background-position: -84px -22px;
+    }
+
+    .list {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .item {
+      width: 304px;
+      &:nth-child(even) { margin-left: 40px; }
+    }
+
+    .item-title { font-size: 20px; }
+    .item-description { font-size: 14px; }
+
+    .quote {
+      width: 420px;
+      font-size: 15px;
+
+      &:before {
+        left: auto;
+        right: -30px;
+        bottom: 40px;
+      }
+
+      &:after {
+        left: auto;
+        right: -30px;
+        bottom: 24px;
+        height: 54px;
+        transform: rotate(90deg);
+      }
+
+      p:after {
+        left: auto;
+        right: -27px;
+        bottom: 29px;
+        height: 48px;
+        width: 20px;
+      }
+    }
+
+    .chameleon {
+      bottom: -375px;
+      right: -215px;
+      width: 415px;
+    }
+  }
+}

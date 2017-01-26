@@ -1,0 +1,49 @@
+.profile {
+  &.section {
+    background-color: $brown;
+  }
+
+  .section-title:before {
+    background-position: -108px -10px;
+  }
+
+  .intro {
+    font-family: 'Domine', serif;
+    margin-bottom: 45px;
+    font-size: 15px;
+  }
+
+  .image {
+    border-radius: 50%;
+    width: 50%;
+    height: auto;
+    float: right;
+  }
+
+  .image.placeholder {
+    position: relative;
+    z-index: 2;
+    filter: blur(2px);
+    opacity: 1;
+    animation: fadeOut .3s cubic-bezier(0.55, 0.09, 0.68, 0.53) 1 forwards;
+  }
+  .is-paused {
+    -webkit-animation-play-state: paused !important;
+    -moz-animation-play-state: paused !important;
+    animation-play-state: paused !important;
+  }
+
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+    }
+  }
+
+  .image.original {
+    position: absolute;
+    opacity: 1;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+}

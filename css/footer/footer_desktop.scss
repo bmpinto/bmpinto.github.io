@@ -1,0 +1,12 @@
+@media (min-width: $desktop-breakpoint) {
+  .site-footer {
+    .note {
+      font-size: 19px;
+    }
+  }
+
+  .contacts a {
+    font-size: 27px;
+    padding: 7px 30px 2px 50px;
+  }
+}

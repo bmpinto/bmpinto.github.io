@@ -1,0 +1,27 @@
+@media (min-width: $desktop-breakpoint) {
+  .tools {
+    .item {
+      width: 333px;
+      &:nth-child(even) {
+        margin-left: 50px;
+      }
+    }
+
+    .quote {
+      font-size: 16px;
+      padding: 25px 70px;
+
+      &:before {
+        left: 400px;
+      }
+
+      &:after {
+        left: 423px;
+      }
+
+      p:after {
+        left: 303px;
+      }
+    }
+  }
+}

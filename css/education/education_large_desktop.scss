@@ -1,0 +1,134 @@
+@media (min-width: $large-desktop-breakpoint) {
+  .education {
+    &.section {
+      padding-bottom: 200px;
+    }
+
+    .section-title:before {
+      background-position: -533px 0;
+    }
+
+    .container > .container {
+      float: left;
+      width: 718px;
+    }
+
+    .container > .extras.container {
+      float: right;
+      width: 238px;
+    }
+
+    .bachelor.wrapper {
+      padding-left: 0;
+    }
+
+    .heading {
+      font-size: 28px;
+    }
+
+    .extras .heading {
+      margin-top: 11px;
+      margin-bottom: 37px;
+      font-size: 19px;
+    }
+
+    .item {
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    .wrapper + .wrapper {
+      margin-top: 150px;
+    }
+
+    .title:before,
+    .description li:before {
+      background-size: 2230px 330px;
+      width: 45px;
+      height: 35px;
+    }
+
+    .title {
+      font-size: 32px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+
+      &:before {
+        background-position: 667px 182px;
+        left: 43px;
+        top: 22px;
+      }
+    }
+
+    .description {
+      font-size: 25px;
+
+      li {
+        padding-top: 25px;
+        padding-bottom: 20px;
+
+        &:before {
+          top: 20px;
+          left: 43px;
+        }
+
+        &:nth-child(1):before {
+          background-position: 549px 183px;
+        }
+
+        &:nth-child(2):before {
+          background-position: 449px 183px;
+        }
+
+        &:nth-child(3):before {
+          background-position: 331px 183px;
+          height: 40px;
+        }
+
+        &:nth-child(4):before {
+          background-position: 225px 183px;
+        }
+      }
+
+      li:last-child {
+        font-size: 18px;
+        line-height: 31px;
+        letter-spacing: 0;
+      }
+    }
+
+    .title,
+    .description li {
+      padding: 25px 125px;
+    }
+
+    .courses {
+      columns: auto auto;
+    }
+
+    .course {
+      margin-bottom: 30px;
+      -webkit-column-break-inside: auto;
+      page-break-inside: auto;
+      break-inside: auto;
+
+      .name,
+      .place {
+        font-size: 13px;
+
+        &:before {
+          background-size: 780px 310px;
+          width: 17px;
+        }
+      }
+
+      .name:before {
+        background-position: 212px 161px;
+      }
+
+      .place:before {
+        background-position: 136px 161px;
+      }
+    }
+  }
+}

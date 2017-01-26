@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: $text-color;
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  padding-top: 50px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.site-content {
+  overflow: hidden;
+}
+
+.section {
+  padding: 45px 30px;
+}
+
+.container {
+  position: relative;
+  width: 260px;
+  margin: 0 auto;
+}
+
+.section-title {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 60px;
+  padding-left: 70px;
+
+  &:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(../img/sprite_xl.svg);
+    background-size: 378px 70px;
+    background-repeat: no-repeat;
+  }
+}
+
+.quote {
+  position: relative;
+  margin: 35px 0 0 0;
+  font-family: 'Domine', serif;
+  font-size: 12px;
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px dashed;
+
+  &:before,
+  &:after,
+  p:after {
+    content: "";
+    position: absolute;
+  }
+
+  &:before {
+    border-right: 2px dashed;
+  }
+
+  &:after {
+    border-right: 2px dashed;
+  }
+
+  p {
+    position: relative;
+    margin: 0;
+  }
+}
+
+.is-relative {
+  position: relative !important;
+}
+
+@media (min-width: $tablet-breakpoint) {
+  .section { padding: 60px; }
+  .container { width: 648px; }
+
+  .section-title {
+    font-size: 35px;
+    padding-left: 95px;
+    margin-bottom: 80px;
+
+    &:before {
+      width: 77px;
+      height: 77px;
+      background-size: 588px 120px;
+    }
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  body {
+    padding-top: 60px;
+  }
+
+  .container {
+    width: 716px;
+  }
+}
+
+@media (min-width: $large-desktop-breakpoint) {
+  body {
+    padding-top: 75px;
+  }
+
+  .section {
+    padding: 120px 90px;
+  }
+
+  .container {
+    width: 1100px;
+  }
+
+  .section-title {
+    font-size: 50px;
+    padding-left: 150px;
+    margin-bottom: 130px;
+
+    &:before {
+      width: 120px;
+      height: 120px;
+      background-size: 918px 120px;
+    }
+  }
+}

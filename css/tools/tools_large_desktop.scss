@@ -1,0 +1,58 @@
+@media (min-width: $large-desktop-breakpoint) {
+  .tools {
+    &.section {
+      padding-bottom: 80px;
+    }
+
+    .section-title:before {
+      background-position: -396px 0;
+    }
+
+    .list {
+      font-size: 19px;
+    }
+
+    .item {
+      width: 333px;
+      margin-left: 50px;
+
+      &:nth-child(even) { margin-left: 50px; }
+
+      &:first-child,
+      &:nth-child(3n+4) {
+        margin-left: 0;
+      }
+    }
+
+    .quote {
+      margin-top: 90px;
+      width: 718px;
+      float: right;
+
+      &:before {
+        left: 228px;
+        bottom: -167px;
+        height: 182px;
+        transform: rotate(-35deg);
+      }
+
+      &:after {
+        left: 250px;
+        bottom: -156px;
+        height: 162px;
+        transform: rotate(-22deg);
+      }
+
+      p:after {
+        left: 153px;
+        width: 43px;
+      }
+    }
+
+    .chameleon {
+      width: 420px;
+      right: 20px;
+      bottom: -285px;
+    }
+  }
+}

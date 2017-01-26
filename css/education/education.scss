@@ -1,0 +1,121 @@
+.education {
+  padding-top: 140px;
+
+  &.section {
+    background-color: $green;
+  }
+
+  .extras.container {
+    padding-left: 35px;
+  }
+
+  .section-title:before {
+    background-position: -220px -10px;
+  }
+
+  .heading {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    text-transform: uppercase;
+  }
+
+  .title,
+  .item,
+  .courses {
+    font-family: 'Hind', serif;
+    margin: 0;
+  }
+
+  .item {
+    margin-bottom: 50px;
+  }
+
+  .title,
+  .description li {
+    padding: 10px 10px 10px 35px;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      background-image: url(../img/sprite.svg);
+      background-size: 850px 310px;
+    }
+  }
+
+  .description li {
+    &:nth-child(1):before { background-position: -642px 161px; }
+    &:nth-child(2):before { background-position: -681px 161px; }
+    &:nth-child(3):before { background-position: -725px 162px; }
+    &:nth-child(4):before { background-position: -765px 162px; }
+  }
+
+  .title {
+    padding-top: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: $brown;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: 1.1px;
+
+    &:before {
+      top: 13px;
+      background-position: -596px 163px;
+    }
+  }
+
+  .description li:last-child {
+    padding-bottom: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .description,
+  .course .name,
+  .course .place {
+    color: #000;
+    font-size: 12px;
+    line-height: 14px;
+
+    li:nth-child(odd) { background-color: $grey; }
+    li:nth-child(even) { background-color: #fff; }
+  }
+
+  .course {
+    margin-bottom: 25px;
+
+    .name,
+    .place {
+      padding-left: 25px;
+      display: block;
+      position: relative;
+
+      &:before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url(../img/sprite.svg);
+        background-size: 750px 310px;
+      }
+    }
+
+    .name:before { background-position: 204px 161px; }
+    .place:before { background-position: 130px 161px; }
+
+    .place {
+      margin-top: 7px;
+    }
+  }
+}

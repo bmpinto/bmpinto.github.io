@@ -1,0 +1,92 @@
+.tools {
+  padding-bottom: 65px;
+
+  &.section {
+    background-color: $brown;
+  }
+
+  .section-title:before {
+    background-position: -163px -10px;
+  }
+
+  .list {
+    font-family: "Hind", serif;
+    font-size: 15px;
+  }
+
+  .item {
+    margin-bottom: 20px;
+    display: flex;
+  }
+
+  .item-title {
+    width: 60%;
+    text-align: right;
+  }
+
+  .item-rating {
+    width: 40%;
+    text-align: left;
+    padding-left: 20px;
+
+    span {
+      border-radius: 50%;
+      display: inline-block;
+      background-color: #000;
+      border: 1px solid #000;
+      width: 10px;
+      height: 10px;
+    }
+
+    &.one span:nth-last-child(-n+4),,
+    &.two span:nth-last-child(-n+3),
+    &.three span:nth-last-child(-n+2),
+    &.four span:nth-last-child(-n+2), {
+      background: none;
+    }
+  }
+
+  .quote {
+    border-color: $blue;
+
+    &:before,
+    &:after {
+      border-color: $blue;
+    }
+
+    &:before {
+      left: 30px;
+      bottom: -107px;
+      height: 107px;
+      transform: rotate(5deg);
+    }
+
+    &:after {
+      left: 44px;
+      bottom: -110px;
+      height: 110px;
+      transform: rotate(19deg);
+    }
+
+    p:after {
+      left: 10px;
+      bottom: -27px;
+      height: 20px;
+      width: 30px;
+      background-color: $brown;
+    }
+  }
+
+  .chameleon {
+    position: absolute;
+    bottom: -185px;
+    right: 0;
+    width: 235px;
+
+    .cls-1{ fill:#d5af86; }
+    .cls-2{ fill:#a4bed7; }
+    .cls-3{ fill:#ffffff; }
+    .cls-4{ fill:#cfe795; }
+    .cls-5{ fill:#a4d7c7; }
+  }
+}

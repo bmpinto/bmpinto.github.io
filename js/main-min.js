@@ -178,7 +178,7 @@ function scroll() {
     var itemRef = item.getAttribute('href')
     currentSectionId.push(document.querySelector(itemRef))
   }
-  
+
   currentSectionId = currentSectionId[currentSectionId.length - 1]
   var id = currentSectionId.id
   var lastId

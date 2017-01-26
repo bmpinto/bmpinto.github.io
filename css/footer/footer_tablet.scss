@@ -1,0 +1,37 @@
+@media (min-width: $tablet-breakpoint) {
+  .site-footer {
+    &.section {
+      padding-top: 80px;
+    }
+
+    .section-title:before {
+      background-position: 1px -22px;
+    }
+
+    .section-title {
+      width: 420px;
+      &:before { top: 30px; }
+    }
+
+    .container {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .note {
+      font-size: 17px;
+      flex: 1;
+    }
+  }
+
+  .contacts {
+    display: flex;
+    width: 100%;
+
+    a {
+      font-size: 25px;
+      width: 304px;
+    }
+    .email { margin-left: 40px; }
+  }
+}

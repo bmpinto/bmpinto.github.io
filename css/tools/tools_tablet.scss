@@ -1,0 +1,61 @@
+@media (min-width: $tablet-breakpoint) {
+  .tools {
+    &.section {
+      padding-bottom: 97px;
+    }
+
+    .section-title:before {
+      background-position: -256px -22px;
+    }
+
+    .list {
+      display: flex;
+      flex-flow: row wrap;
+      font-size: 18px;
+    }
+
+    .item {
+      width: 304px;
+      &:nth-child(even) { margin-left: 40px; }
+    }
+
+    .item-rating {
+      padding-left: 30px;
+
+      span {
+        width: 11px;
+        height: 11px;
+        margin-left: 3px;
+      }
+    }
+
+    .quote {
+      font-size: 15px;
+
+      &:before {
+        left: 330px;
+        bottom: -135px;
+        height: 135px;
+        transform: rotate(-25deg);
+      }
+
+      &:after {
+        left: 353px;
+        bottom: -128px;
+        height: 128px;
+        transform: rotate(-5deg);
+      }
+
+      p:after {
+        left: 276px;
+        width: 45px;
+      }
+    }
+
+    .chameleon {
+      bottom: -245px;
+      right: -40px;
+      width: 315px;
+    }
+  }
+}

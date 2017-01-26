@@ -1,0 +1,89 @@
+@media (min-width: $large-desktop-breakpoint) {
+  .skills {
+    &.section.skills {
+      padding-bottom: 125px;
+    }
+
+    .section-title:before {
+      background-position: -802px 0;
+    }
+
+    .cards {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .card {
+      float: none;
+      width: 333px;
+      margin-bottom: 50px;
+
+      &:nth-child(2n+1) {
+        clear: none;
+      }
+    }
+
+    .card + .card {
+      margin-left: 50px;
+    }
+
+    .card-title {
+      font-size: 26px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .card-list {
+      font-size: 20px;
+      padding-top: 41px;
+      padding-bottom: 41px;
+    }
+
+    .highlight,
+    .quote {
+      float: left;
+    }
+
+    .highlight {
+      margin-left: 0;
+      width: 334px;
+      font-size: 17px;
+      padding-top: 40px;
+      padding-bottom: 35px;
+    }
+
+    .quote {
+      margin-top: 0;
+      margin-left: 50px;
+      width: 716px;
+      font-size: 18px;
+      padding: 19px 70px 18px 25px;
+
+      &:before {
+        right: 200px;
+        bottom: -79px;
+        height: 88px;
+        transform: rotate(40deg);
+      }
+
+      &:after {
+        right: 175px;
+        bottom: -97px;
+        height: 125px;
+        transform: rotate(57deg);
+      }
+
+      p:after {
+        right: 57px;
+        bottom: -21px;
+        width: 45px;
+      }
+    }
+
+    .chameleon {
+      width: 181px;
+      bottom: -90px;
+      right: 243px;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@media (min-width: $desktop-breakpoint) {
+  .skills {
+    .card,
+    .highlight,
+    .quote {
+      width: 333px;
+    }
+
+    .card:nth-child(even),
+    .highlight,
+    .quote {
+      margin-left: 50px;
+    }
+
+    .card-title {
+      font-size: 26px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .card-list {
+      font-size: 20px;
+    }
+
+    .quote {
+      padding: 30px 35px;
+      font-size: 16px;
+      margin-top: 40px;
+
+      p:after {
+        bottom: -33px;
+        right: 12px;
+      }
+    }
+  }
+}

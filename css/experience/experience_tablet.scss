@@ -1,0 +1,46 @@
+@media (min-width: $tablet-breakpoint) {
+  .experience {
+    .section-title:before {
+      background-position: -427px -22px;
+    }
+
+    .first.card {
+      margin-left: 115px;
+    }
+
+    .card {
+      width: 535px;
+      margin-bottom: 80px;
+    }
+
+    .list { font-size: 20px; }
+
+    .item {
+      padding: 27px 25px 23px 123px;
+
+      &:before {
+        width: 35px;
+        height: 35px;
+        left: 45px;
+        top: 42px;
+      }
+
+      &:before {
+        background-size: 1770px 330px;
+      }
+
+      &:nth-child(1):before { background-position: 133px 182px; }
+      &:nth-child(2):before {
+        background-size: 1890px 330px;
+        background-position: 423px 182px;
+      }
+      &:nth-child(3):before { background-position: 220px 182px; }
+    }
+
+    .chameleon {
+      bottom: -210px;
+      right: -495px;
+      width: 709px;
+    }
+  }
+}

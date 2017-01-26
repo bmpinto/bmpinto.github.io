@@ -1,0 +1,49 @@
+@media (min-width: $large-desktop-breakpoint) {
+  .experience {
+    .section-title:before {
+      background-position: -667px 0;
+    }
+
+    .first.card {
+      margin-left: 288px;
+    }
+
+    .card {
+      width: 718px;
+    }
+
+    .list {
+      font-size: 33px;
+    }
+
+    .item {
+      &:before {
+        width: 45px;
+        height: 39px;
+        top: 50px;
+      }
+
+      &:nth-child(1):before {
+        background-size: 2050px 330px;
+        background-position: 156px 184px;
+      }
+
+      &:nth-child(2):before {
+        background-size: 2700px 330px;
+        background-position: 601px 184px;
+        top: 52px;
+      }
+
+      &:nth-child(3):before {
+        background-size: 2100px 330px;
+        background-position: 264px 185px;
+      }
+    }
+
+    .chameleon {
+      width: 936px;
+      right: -653px;
+      bottom: -275px;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 150px;
+
+  &.section {
+    background-color: $grey;
+  }
+
+  .section-title {
+    color: $brown;
+
+    &:before {
+      background-position: -54px -10px;
+    }
+  }
+
+  .image-link {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    max-height: 250px;
+
+    &:hover,
+    &:focus {
+      .hover { z-index: 1; }
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .image.placeholder {
+    position: relative;
+    z-index: 2;
+    filter: blur(6px);
+    opacity: 1;
+    animation: fadeOut .3s cubic-bezier(0.55, 0.09, 0.68, 0.53) 1 forwards;
+  }
+
+  .is-paused {
+    -webkit-animation-play-state: paused !important;
+    -moz-animation-play-state: paused !important;
+    animation-play-state: paused !important;
+  }
+
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+    }
+  }
+
+  .image.original {
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .image.hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .item-title {
+    display: block;
+    color: $brown;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .item-description {
+    font-family: 'Domine', serif;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .quote {
+    border-color: $green;
+
+    &:before,
+    &:after {
+      border-color: $green;
+    }
+
+    &:before {
+      left: 85px;
+      bottom: -65px;
+      height: 75px;
+      transform: rotate(-45deg);
+    }
+
+    &:after {
+      left: 110px;
+      bottom: -55px;
+      height: 54px;
+      transform: rotate(-5deg);
+    }
+
+    p:after {
+      left: 36px;
+      bottom: -27px;
+      height: 20px;
+      width: 48px;
+      background-color: $grey;
+    }
+  }
+
+  .chameleon {
+    position: absolute;
+    bottom: -410px;
+    right: -160px;
+    width: 325px;
+
+    .cls-1{ fill:#d5af86; }
+    .cls-2{ fill:#ffffff; }
+    .cls-3{ fill:#fbd37c; }
+    .cls-4{ fill:#f2f2f2; }
+    .cls-5{ fill:#cfe795; }
+  }
+}

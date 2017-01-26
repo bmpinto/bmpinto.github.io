@@ -1,0 +1,41 @@
+@media (min-width: $desktop-breakpoint) {
+  .education {
+    .item {
+      width: 580px;
+    }
+
+    .title,
+    .description li {
+      padding: 24px 75px 22px 80px;
+    }
+
+    .title {
+      font-size: 26px;
+
+      &:before {
+        top: 23px;
+        left: 25px;
+      }
+    }
+
+    .description {
+      font-size: 22px;
+
+      li {
+        &:before {
+          top: 20px;
+          left: 25px;
+        }
+
+        &:last-child {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .course .name,
+    .course .place {
+      font-size: 13px;
+    }
+  }
+}

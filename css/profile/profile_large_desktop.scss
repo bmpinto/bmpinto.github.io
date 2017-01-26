@@ -1,0 +1,16 @@
+@media (min-width: $large-desktop-breakpoint) {
+  .profile {
+    .section-title:before {
+      background-position: -266px 0;
+    }
+
+    .intro {
+      font-size: 27px;
+      width: 718px;
+    }
+
+    .image {
+      width: 238px;
+    }
+  }
+}

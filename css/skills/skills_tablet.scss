@@ -1,0 +1,78 @@
+@media (min-width: $tablet-breakpoint) {
+  .skills {
+    &.section {
+      padding-bottom: 75px;
+    }
+
+    .section-title:before {
+      background-position: -512px -22px;
+    }
+
+    .card,
+    .highlight,
+    .quote {
+      float: left;
+      width: 304px;
+    }
+
+    .card:nth-child(even),
+    .highlight,
+    .quote {
+      margin-left: 40px;
+    }
+
+    .card {
+      margin-bottom: 40px;
+      &:nth-child(2n + 1) { clear: both; }
+    }
+
+    .card-title {
+      font-size: 20px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    .card-list {
+      font-size: 17px;
+      padding-top: 41px;
+      padding-bottom: 41px;
+    }
+
+    .highlight {
+      font-size: 16px;
+      padding: 15px 25px;
+    }
+
+    .quote {
+      margin-top: 20px;
+      font-size: 15px;
+
+      &:before {
+        right: 86px;
+        bottom: -85px;
+        height: 85px;
+        transform: none;
+      }
+
+      &:after {
+        right: 65px;
+        bottom: -89px;
+        height: 93px;
+        transform: rotate(27deg);
+      }
+
+      p:after {
+        right: 22px;
+        bottom: -27px;
+        height: 20px;
+        width: 38px;
+      }
+    }
+
+    .chameleon {
+      width: 136px;
+      bottom: -47px;
+      right: 100px;
+    }
+  }
+}

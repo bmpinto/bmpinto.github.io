@@ -1,0 +1,74 @@
+.experience {
+  padding-bottom: 95px;
+
+  &.section {
+    background-color: $grey;
+  }
+
+  .section-title {
+    color: $brown;
+
+    &:before {
+      background-position: -275px -10px;
+    }
+  }
+
+  .card + .card {
+    margin-top: 35px;
+  }
+
+  .list {
+    background-color: $green;
+    color: $text-color;
+    font-family: 'Hind', sans-serif;
+    font-size: 12px;
+    border-radius: 5px;
+  }
+
+  .item {
+    padding: 10px 25px;
+    position: relative;
+
+    &:nth-child(even) { background-color: $purple; }
+
+    &:before {
+      content: "";
+      width: 18px;
+      height: 15px;
+      position: absolute;
+      left: 20px;
+      top: 17px;
+      transform: translateY(-50%);
+      background-image: url(../img/sprite.svg);
+      background-size: 830px 310px;
+      background-position: 63px 163px;
+    }
+
+    &:nth-child(2):before {
+      background-size: 1100px 310px;
+      background-position: 245px 163px;
+    }
+
+    &:nth-child(3):before {
+      background-position: 104px 163px;
+    }
+  }
+
+  .item-description {
+    padding-left: 25px;
+    display: inline-block;
+  }
+
+  .chameleon {
+    position: absolute;
+    bottom: -213px;
+    right: -436px;
+    width: 530px;
+
+    .cls-1{ fill:#ff9b6d; }
+    .cls-2{ fill:#d5af86; }
+    .cls-3{ fill:#ffffff; }
+    .cls-4{ fill:#a4d7c7; }
+    .cls-5{ fill:#f2f2f2; }
+  }
+}

@@ -1,0 +1,63 @@
+.site-footer {
+  &.section {
+    background-color: $text-color;
+  }
+
+  .section-title {
+    color: $green;
+
+    &:before {
+      background-position: 0 -10px;
+    }
+  }
+
+  .note {
+    color: $brown;
+    text-align: center;
+    margin-bottom: 45px;
+    font-family: "Domine", serif;
+    font-size: 14px;
+  }
+}
+
+.contacts a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Hind", sans-serif;
+  font-size: 22px;
+  border-radius: 15px;
+  color: $text-color;
+  box-shadow: 0 5px 0 0 $orange;
+  background-color: $yellow;
+  padding: 5px 30px 0 50px;
+  width: 100%;
+  margin-bottom: 25px;
+
+  &:hover,
+  &:focus {
+    background-color: #fbe87c;
+    box-shadow: 0 5px 0 0 #ff9b6d;
+  }
+
+  &:active {
+    transform: translate(0, 5px);
+    box-shadow: 0 1px 0 0;
+  }
+
+  &:before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(../img/sprite.svg);
+    background-size: 1400px 113px;
+  }
+
+  &.tel:before { background-position: 1470px 182px; }
+  &.email:before { background-position: 1435px 182px; }
+}

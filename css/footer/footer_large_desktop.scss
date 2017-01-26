@@ -1,0 +1,37 @@
+@media (min-width: $large-desktop-breakpoint) {
+  .site-footer {
+    .section-title:before {
+      top: 43px;
+      background-position: 1px 0;
+    }
+
+    .container {
+      justify-content: space-between;
+    }
+
+    .note {
+      flex: initial;
+      width: 526px;
+      font-size: 22px;
+    }
+
+    .contacts a {
+      width: 718px;
+      font-size: 41px;
+
+      &:before {
+        width: 35px;
+        height: 35px;
+        background-size: 1950px 113px;
+      }
+
+      &.tel:before {
+        background-position: 2045px 187px;
+      }
+
+      &.email:before {
+        background-position: 1999px 187px; 
+      }
+    }
+  }
+}

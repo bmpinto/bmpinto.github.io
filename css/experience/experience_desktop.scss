@@ -1,0 +1,19 @@
+@media (min-width: $desktop-breakpoint) {
+  .experience {
+    .card {
+      width: 580px;
+    }
+
+    .first.card {
+      margin-left: 136px;
+    }
+
+    .list {
+      font-size: 27px;
+    }
+
+    .item:before {
+      top: 46px;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@media (min-width: $large-desktop-breakpoint) {
+  .site-header {
+    height: 75px;
+    padding: 0 30px;
+  }
+
+  #logo {
+    font-size: 18px;
+    padding-left: 50px;
+
+    &:before {
+      width: 45px;
+      height: 40px;
+      background-size: 1900px 310px;
+      background-position: -165px 175px;
+      top: -5px;
+    }
+
+    &:hover:before,
+    &:focus:before {
+      background-position: -217px 175px;
+    }
+
+    &:active:before {
+      background-position: -269px 175px;
+    }
+  }
+
+  .main-nav {
+    font-size: 17px;
+
+    a + a {
+      margin-left: 25px;
+    }
+  }
+
+  .social-nav {
+    margin-left: 65px;
+
+    a {
+      background-size: 2020px 310px;
+      width: 38px;
+      height: 37px;
+
+      &.linkedin {
+        background-position: -340px 173px;
+
+        &:hover,
+        &:focus {
+          background-position: -390px 173px;
+        }
+
+        &:active {
+          background-position: -440px 173px;
+        }
+      }
+
+      &.behance {
+        background-position: -489px 173px;
+
+        &:hover,
+        &:focus {
+          background-position: -539px 173px;
+        }
+
+        &:active {
+          background-position: -589px 173px;
+        }
+      }
+
+      &.dribbble {
+        background-position: -638px 173px;
+
+        &:hover,
+        &:focus {
+          background-position: -688px 173px;
+        }
+
+        &:active {
+          background-position: -738px 173px;
+        }
+      }
+    }
+  }
+}

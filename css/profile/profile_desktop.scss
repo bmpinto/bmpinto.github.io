@@ -1,0 +1,12 @@
+@media (min-width: $desktop-breakpoint) {
+  .profile {
+    .intro {
+      font-size: 20px;
+      width: 450px;
+    }
+
+    .image {
+      width: 210px;
+    }
+  }
+}

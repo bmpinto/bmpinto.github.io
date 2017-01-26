@@ -1,0 +1,128 @@
+@media (min-width: $desktop-breakpoint) {
+  .site-header {
+    height: 60px;
+    padding: 0 25px;
+  }
+
+  #logo {
+    font-size: 15px;
+    padding-left: 38px;
+
+    &:before {
+      width: 30px;
+      height: 30px;
+      background-size: 1400px 310px;
+      background-position: -121px 170px;
+      left: 0;
+      top: -3px;
+    }
+
+    &:hover:before,
+    &:focus:before {
+      background-position: -159px 170px;
+    }
+
+    &:active:before {
+      background-position: -197px 170px;
+    }
+  }
+
+  .menu-trigger {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 5px 0 0 0;
+    position: relative;
+    background: none;
+    max-height: none;
+    height: auto;
+    width: auto;
+    top: auto;
+  }
+
+  .main-nav {
+    display: inline-block;
+    vertical-align: top;
+    font-family: "Hind", sans-serif;
+    font-size: 15px;
+
+    a {
+      display: inline-block;
+
+      &:hover,
+      &:focus {
+        color: $brown;
+        border: none;
+      }
+
+      &.active {
+        border-bottom: 2px solid $yellow;
+      }
+    }
+
+    a + a {
+      margin-top: 0;
+      margin-left: 15px;
+    }
+  }
+
+  .social-nav {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: top;
+    line-height: 1;
+
+    a + a {
+      margin-left: 10px;
+    }
+
+    a {
+      background-size: 1620px 310px;
+      width: 29px;
+      height: 30px;
+
+      &.linkedin {
+        background-position: -273px 170px;
+
+        &:hover,
+        &:focus {
+          background-position: -313px 170px;
+        }
+
+        &:active {
+          background-position: -353px 170px;
+        }
+      }
+
+      &.behance {
+        background-position: -393px 170px;
+
+        &:hover,
+        &:focus {
+          background-position: -433px 170px;
+        }
+
+        &:active {
+          background-position: -473px 170px;
+        }
+      }
+
+      &.dribbble {
+        background-position: -513px 170px;
+
+        &:hover,
+        &:focus {
+          background-position: -553px 170px;
+        }
+
+        &:active {
+          background-position: -593px 170px;
+        }
+      }
+    }
+  }
+}
