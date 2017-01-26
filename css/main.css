@@ -188,7 +188,7 @@ ul {
 
 .container {
   position: relative;
-  max-width: 260px;
+  width: 260px;
   margin: 0 auto; }
 
 .section.profile,
@@ -749,7 +749,7 @@ ul {
   .section {
     padding: 60px; }
   .container {
-    max-width: 648px; }
+    width: 648px; }
   .section-title {
     font-size: 35px;
     padding-left: 95px;
@@ -776,7 +776,8 @@ ul {
     float: left;
     font-size: 18px;
     width: 420px;
-    padding-right: 40px; }
+    padding-right: 40px;
+    margin-bottom: 0; }
   .profile .image {
     width: 190px; }
   .section.skills {
@@ -1005,7 +1006,7 @@ ul {
   body {
     padding-top: 60px; }
   .container {
-    max-width: 716px; }
+    width: 716px; }
   .site-header {
     height: 60px;
     padding: 0 25px; }
@@ -1098,7 +1099,68 @@ ul {
     padding-top: 30px;
     padding-bottom: 30px; }
   .skills .card-list {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .skills .quote {
+    padding: 30px 35px;
+    font-size: 16px;
+    margin-top: 40px; }
+    .skills .quote p:after {
+      bottom: -33px;
+      right: 12px; }
+  .portfolio .item {
+    width: 333px; }
+    .portfolio .item:nth-child(even) {
+      margin-left: 50px; }
+  .portfolio .quote {
+    width: 455px; }
+  .portfolio .chameleon {
+    right: -185px; }
+  .tools .item {
+    width: 333px; }
+    .tools .item:nth-child(even) {
+      margin-left: 50px; }
+  .tools .quote {
+    font-size: 16px;
+    padding: 25px 70px; }
+    .tools .quote:before {
+      left: 400px; }
+    .tools .quote:after {
+      left: 423px; }
+    .tools .quote p:after {
+      left: 303px; }
+  .education .item {
+    width: 580px; }
+  .education .title,
+  .education .description li {
+    padding: 24px 75px 22px 80px; }
+  .education .title {
+    font-size: 26px; }
+    .education .title:before {
+      top: 23px;
+      left: 25px; }
+  .education .description {
+    font-size: 22px; }
+    .education .description li:before {
+      top: 20px;
+      left: 25px; }
+    .education .description li:last-child {
+      font-size: 18px; }
+  .education .course .name,
+  .education .course .place {
+    font-size: 13px; }
+  .experience .card {
+    width: 580px; }
+  .experience .first.card {
+    margin-left: 136px; }
+  .experience .list {
+    font-size: 27px; }
+  .experience .item:before {
+    top: 46px; }
+  .site-footer .note {
+    font-size: 19px; }
+  .site-footer .contacts a {
+    font-size: 27px;
+    padding: 7px 30px 2px 50px; } }
 
 @media (min-width: 1280px) {
   body {
@@ -1150,7 +1212,7 @@ ul {
   .section {
     padding: 120px 90px; }
   .container {
-    max-width: 1100px; }
+    width: 1100px; }
   .section-title {
     font-size: 50px;
     padding-left: 150px;
@@ -1418,54 +1480,6 @@ ul {
     .site-footer .contacts a.email:before {
       background-position: 1999px 187px; } }
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-/*
- * Hide visually and from screen readers
- */
-.hidden {
-  display: none !important; }
-
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto; }
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -1475,11 +1489,3 @@ ul {
 
 .clearfix:after {
   clear: both; }
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */ }

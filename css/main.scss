@@ -262,7 +262,7 @@ ul {
 
 .container {
   position: relative;
-  max-width: 260px;
+  width: 260px;
   margin: 0 auto;
 }
 
@@ -965,7 +965,7 @@ ul {
 
 @media (min-width: $tablet-breakpoint) {
   .section { padding: 60px; }
-  .container { max-width: 648px; }
+  .container { width: 648px; }
 
   .section-title {
     font-size: 35px;
@@ -993,6 +993,7 @@ ul {
       font-size: 18px;
       width: 420px;
       padding-right: 40px;
+      margin-bottom: 0;
     }
 
     .image {
@@ -1318,7 +1319,7 @@ ul {
   }
 
   .container {
-    max-width: 716px;
+    width: 716px;
   }
 
   .site-header {
@@ -1466,21 +1467,145 @@ ul {
       width: 333px;
     }
 
-   .card:nth-child(even),
-   .highlight,
-   .quote {
-    margin-left: 50px;
-   }
+    .card:nth-child(even),
+    .highlight,
+    .quote {
+      margin-left: 50px;
+    }
 
-   .card-title {
-    font-size: 26px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-   }
+    .card-title {
+      font-size: 26px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
 
-   .card-list {
+    .card-list {
       font-size: 20px;
-   }
+    }
+
+    .quote {
+      padding: 30px 35px;
+      font-size: 16px;
+      margin-top: 40px;
+
+      p:after {
+        bottom: -33px;
+        right: 12px;
+      }
+    }
+  }
+
+  .portfolio {
+    .item {
+      width: 333px;
+
+      &:nth-child(even) {
+        margin-left: 50px;
+      }
+    }
+
+    .quote {
+      width: 455px;
+    }
+
+    .chameleon {
+      right: -185px;
+    }
+  }
+
+  .tools {
+    .item {
+      width: 333px;
+      &:nth-child(even) {
+        margin-left: 50px;
+      }
+    }
+
+    .quote {
+      font-size: 16px;
+      padding: 25px 70px;
+
+      &:before {
+        left: 400px;
+      }
+
+      &:after {
+        left: 423px;
+      }
+
+      p:after {
+        left: 303px;
+      }
+    }
+  }
+
+  .education {
+    .item {
+      width: 580px;
+    }
+
+    .title,
+    .description li {
+      padding: 24px 75px 22px 80px;
+    }
+
+    .title {
+      font-size: 26px;
+
+      &:before {
+        top: 23px;
+        left: 25px;
+      }
+    }
+
+    .description {
+      font-size: 22px;
+
+      li {
+        &:before {
+          top: 20px;
+          left: 25px;
+        }
+
+        &:last-child {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .course .name,
+    .course .place {
+      font-size: 13px;
+    }
+  }
+
+  .experience {
+    .card {
+      width: 580px;
+    }
+
+    .first.card {
+      margin-left: 136px;
+    }
+
+    .list {
+      font-size: 27px;
+    }
+
+    .item:before {
+      top: 46px;
+    }
+  }
+
+  .site-footer {
+    .note {
+      font-size: 19px;
+    }
+
+    .contacts a {
+      font-size: 27px;
+      padding: 7px 30px 2px 50px;
+    }
   }
 }
 
@@ -1578,7 +1703,7 @@ ul {
   }
 
   .container {
-    max-width: 1100px;
+    width: 1100px;
   }
 
   .section-title {
@@ -1760,7 +1885,7 @@ ul {
       margin-left: 50px;
 
       &:nth-child(even) { margin-left: 50px; }
-      
+
       &:first-child,
       &:nth-child(3n+4) {
         margin-left: 0;
@@ -1855,7 +1980,7 @@ ul {
 
     .description {
       font-size: 25px;
-      
+
       li {
         padding-top: 25px;
         padding-bottom: 20px;
@@ -2001,63 +2126,6 @@ ul {
   }
 }
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-    display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
 .clearfix:before,
 .clearfix:after {
     content: " "; /* 1 */
@@ -2066,14 +2134,4 @@ ul {
 
 .clearfix:after {
     clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
 }
