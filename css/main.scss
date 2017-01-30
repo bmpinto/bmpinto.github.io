@@ -15,6 +15,11 @@ $site-max-width: 1280px;
 
 @import 'base';
 
+// intro
+@import 'intro/intro';
+@import 'intro/intro_tablet';
+@import 'intro/intro_large_desktop';
+
 // header
 @import 'header/header';
 @import 'header/header_desktop';

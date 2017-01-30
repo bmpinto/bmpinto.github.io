@@ -1,0 +1,93 @@
+@media (min-width: $tablet-breakpoint) {
+  .intro {
+    .container {
+      width: 768px;
+    }
+
+    .content {
+      padding: 60px;
+      top: 50%;
+    }
+
+    .brand {
+      font-size: 44px;
+      letter-spacing: 1px;
+    }
+
+    .statement-content {
+      font-size: 17px;
+      margin-bottom: 19px;
+    }
+
+    .statement-author {
+      font-size: 15px;
+    }
+
+    .imac {
+      top: 5px;
+      left: auto;
+      right: -2px;
+      width: 763px;
+    }
+
+    .cutter {
+      top: 175px;
+      right: 15px;
+      width: 98px;
+    }
+
+    .marker {
+      top: 317px;
+      right: -67px;
+      width: 158px;
+    }
+
+    .pantones {
+      top: 205px;
+      left: -52px;
+      width: 209px;
+    }
+
+    .earphones {
+      top: 5px;
+      right: -40px;
+      width: 243px;
+    }
+
+    .userflows {
+      top: 620px;
+      left: -52px;
+      width: 258px;
+    }
+
+    .pencil {
+      top: 586px;
+      right: 44px;
+      width: 70px;
+    }
+
+    .iphone {
+      top: 646px;
+      right: 285px;
+      width: 70px;
+    }
+
+    .wireframe {
+      top: 767px;
+      right: 23px;
+      width: 200px;
+    }
+
+    .mouse {
+      top: 843px;
+      right: 286px;
+      width: 61px; 
+    }
+
+    .keyboard {
+      top: 850px;
+      left: 103px;
+      width: 250px;
+    }
+  }
+}

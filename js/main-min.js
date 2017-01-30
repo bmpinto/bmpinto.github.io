@@ -29,11 +29,13 @@ function scrollToY(scrollTargetY, elementRef) {
       window.scrollTo(0, scrollY + ((scrollTargetY - scrollY) * t))
     } else {
       window.scrollTo(0, scrollTargetY)
-      var el = document.getElementById(elementRef.replace('#',''));
-      var id = el.id;
-      el.removeAttribute('id');
-      window.location.hash = elementRef;
-      el.setAttribute('id',id);
+      if(elementRef) {
+        var el = document.getElementById(elementRef.replace('#',''));
+        var id = el.id;
+        el.removeAttribute('id');
+        window.location.hash = elementRef;
+        el.setAttribute('id',id);
+      }
     }
   }
 
@@ -124,17 +126,6 @@ function filterContainers(containersArray, currentContainer) {
   })
 }
 
-// remove placeholder image after animation
-function animate(image, placeholder) {
-  placeholder.parentNode.appendChild(image)
-  placeholder.classList.remove('is-paused')
-
-  placeholder.addEventListener('animationend', function() {
-    image.classList.add('is-relative')
-    placeholder.remove()
-  })
-}
-
 function lazyLoadImages() {
   lazyContainers.map(function(currentContainer) {
     if(elementInViewport(currentContainer)) {
@@ -179,7 +170,16 @@ function scroll() {
     currentSectionId.push(document.querySelector(itemRef))
   }
 
+  if(! currentSectionId.length) {
+    var actives = mainNav.querySelectorAll('.active')
+    ;[].forEach.call(actives, function(active) {
+        active.classList.remove('active')
+    })
+    return
+  }
+
   currentSectionId = currentSectionId[currentSectionId.length - 1]
+  
   var id = currentSectionId.id
   var lastId
   
@@ -195,6 +195,9 @@ function scroll() {
   }
 }
 
+document.querySelector('#logo').addEventListener('click', function(item) {
+  scrollToY(0)
+})
 var lazy = document.querySelectorAll('.lazy')
 var menuItems = document.querySelectorAll('.main-nav a')
 var menuTrigger = document.querySelector('.menu-trigger')
@@ -225,4 +228,45 @@ menuTrigger.addEventListener('click', function() {
 
 window.addEventListener('scroll', scroll)
 window.addEventListener('load', lazyLoadImages)
+
+var statements = document.querySelectorAll('.statement')
+var statementsNav = document.querySelectorAll('.testimonials-nav li')
+var statementsLength = statements.length - 1
+var index = 1
+
+var carousel = setInterval(function () {
+  ;[].forEach.call(statements, function(statement) {
+    statement.classList.remove('is-active')
+  })
+
+  ;[].forEach.call(statementsNav, function(statement) {
+    statement.classList.remove('is-active')
+  })
+
+  if(index === statementsLength + 1)
+    index = 0
+
+  statements[index].classList.add('is-active')
+  statementsNav[index].classList.add('is-active')
+
+  index++
+}, 5000)
+
+;[].forEach.call(statementsNav, function(statement) {
+  statement.addEventListener('click', function() {
+    var statementIndex = statement.getAttribute('data-statement-index')
+    clearTimeout(carousel)
+    
+    ;[].forEach.call(statements, function(statement) {
+      statement.classList.remove('is-active')
+    })
+
+    ;[].forEach.call(statementsNav, function(statement) {
+      statement.classList.remove('is-active')
+    })
+
+    statements[statementIndex].classList.add('is-active')
+    statement.classList.add('is-active')
+  })
+})
 
