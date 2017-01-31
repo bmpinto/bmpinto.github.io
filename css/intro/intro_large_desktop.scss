@@ -1,5 +1,9 @@
 @media (min-width: $large-desktop-breakpoint) {
   .intro {
+    min-height: 700px;
+    max-height: 950px;
+    height: calc(100vh - 75px);
+
     .brand {
       font-size: 52px;
       letter-spacing: 2px;
@@ -12,7 +16,24 @@
     .content {
       width: 1040px;
     }
-    
+
+    #call-to-action {
+      bottom: 30px;
+    }
+
+    @keyframes jumpUpAndDown {
+      0% {
+        bottom: 30px;
+      }
+      50% {
+        bottom: 35px;
+      }
+
+      0% {
+        bottom: 30px;
+      }
+    }
+
     .testimonials-list {
       text-align: right;
       height: 140px;
@@ -29,9 +50,9 @@
 
     .imac {
       top: 5px;
-      left: auto;
-      right: -2px;
-      width: 763px;
+      width: 75vh;
+      min-width: 525px;
+      max-width: 715px;
     }
 
     .cutter {
@@ -59,38 +80,38 @@
     }
 
     .userflows {
-      top: 620px;
+      top: calc(50% + 70px);
       left: -52px;
       width: 258px;
     }
 
     .pencil {
-      top: 586px;
+      top: calc(50% + 70px);
       right: 44px;
       width: 70px;
     }
 
     .iphone {
-      top: 626px;
-      right: 285px;
+      top: calc(50% + 110px);
+      right: 360px;
       width: 70px;
     }
 
     .wireframe {
-      top: 767px;
-      right: 23px;
+      top: calc(50% + 120px);
+      right: 120px;
       width: 200px;
     }
 
     .mouse {
-      top: 843px;
-      right: 286px;
-      width: 61px; 
+      top: calc(50% + 260px);
+      right: 510px;
+      width: 61px;
     }
 
     .keyboard {
-      top: 850px;
-      left: 103px;
+      top: calc(50% + 230px);
+      left: 310px;
       width: 250px;
     }
   }

@@ -2,8 +2,39 @@
   .intro {
     min-height: 650px;
     max-height: 1024px;
+
     .container {
       width: 768px;
+    }
+
+    #call-to-action {
+      width: 42px;
+      height: 42px;
+      background-position: -17px -134px;
+      background-size: 2150px 310px;
+      bottom: 20px;
+
+      &:hover,
+      &:focus {
+        background-position: -74px -134px;
+      }
+
+      &:active {
+        background-position: -131px -134px;
+      }
+    }
+
+    @keyframes jumpUpAndDown {
+      0% {
+        bottom: 20px;
+      }
+      50% {
+        bottom: 25px;
+      }
+
+      0% {
+        bottom: 20px;
+      }
     }
 
     .content {
@@ -28,7 +59,9 @@
     .imac {
       left: 50%;
       transform: translateX(-50%);
-      width: 65vh;
+      width: 75vh;
+      min-width: 450px;
+      max-width: 665px;
     }
 
     .cutter {
@@ -68,8 +101,8 @@
     }
 
     .iphone {
-      top: calc(50% - -70px);
-      right: 495px;
+      top: calc(50% + 120px);
+      right: 460px;
       width: 70px;
     }
 
@@ -82,12 +115,12 @@
     .mouse {
       top: calc(50% - -174px);
       right: 270px;
-      width: 61px; 
+      width: 61px;
     }
 
     .keyboard {
-      top: calc(50% - -200px);
-      left: 133px;
+      top: calc(50% + 250px);
+      left: 113px;
       width: 220px;
     }
   }

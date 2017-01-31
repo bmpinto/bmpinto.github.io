@@ -179,10 +179,10 @@ function scroll() {
   }
 
   currentSectionId = currentSectionId[currentSectionId.length - 1]
-  
+
   var id = currentSectionId.id
   var lastId
-  
+
   if(lastId !== id) {
     lastId = id
     var el = mainNav.querySelector('[href="#'+ id +'"]')
@@ -197,6 +197,9 @@ function scroll() {
 
 document.querySelector('#logo').addEventListener('click', function(item) {
   scrollToY(0)
+})
+document.querySelector('#call-to-action').addEventListener('click', function() {
+  scrollToSection(this.getAttribute('href'));
 })
 var lazy = document.querySelectorAll('.lazy')
 var menuItems = document.querySelectorAll('.main-nav a')

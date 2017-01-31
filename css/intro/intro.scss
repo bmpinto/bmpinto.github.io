@@ -18,6 +18,45 @@
     transform: translate(-50%, -50%);
   }
 
+  #call-to-action {
+    width: 26px;
+    height: 26px;
+    background-position: -10px -143px;
+    background-image: url(../img/sprite.svg);
+    background-size: 1320px 310px;
+    -webkit-transform: translate(-50%);
+    overflow: hidden;
+    text-indent: -100%;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translate(-50%);
+    animation: 1.2s ease-out 0s infinite normal jumpUpAndDown;
+
+    &:hover,
+    &:focus {
+      background-position: -45px -143px;
+    }
+
+    &:active {
+      background-position: -80px -143px;
+    }
+  }
+
+  @keyframes jumpUpAndDown {
+    0% {
+      bottom: 13px;
+    }
+    50% {
+      bottom: 18px;
+    }
+
+    0% {
+      bottom: 13px;
+    }
+  }
+
   .brand {
     font-size: 25px;
     font-weight: bold;
@@ -85,7 +124,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%) translateY(-50%) translateZ(0);
     transition: opacity 0.5s ease-out;
   }
 
@@ -110,8 +149,11 @@
 
   .imac {
     top: -7px;
-    left: 5px;
-    width: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55vh;
+    min-width: 310px;
+    max-width: 468px;
   }
 
   .cutter {
@@ -145,7 +187,7 @@
   }
 
   .pencil {
-    top: calc(50% + 100px);
+    top: calc(50% + 190px);
     right: 25px;
     width: 29px;
   }
