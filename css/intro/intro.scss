@@ -29,9 +29,9 @@
     text-indent: -100%;
     white-space: nowrap;
     position: absolute;
+    transform: translateX(-50%) translateY(-13px);
     bottom: 13px;
     left: 50%;
-    transform: translate(-50%);
     animation: 1.2s ease-out 0s infinite normal jumpUpAndDown;
 
     &:hover,
@@ -46,14 +46,14 @@
 
   @keyframes jumpUpAndDown {
     0% {
-      bottom: 13px;
+      transform: translateY(-13px);
     }
     50% {
-      bottom: 18px;
+      transform: translateY(-18px);
     }
 
-    0% {
-      bottom: 13px;
+    100% {
+      transform: translateY(-13px);
     }
   }
 

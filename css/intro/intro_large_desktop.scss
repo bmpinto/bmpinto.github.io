@@ -1,6 +1,6 @@
 @media (min-width: $large-desktop-breakpoint) {
   .intro {
-    min-height: 700px;
+    min-height: 670px;
     max-height: 950px;
     height: calc(100vh - 75px);
 
@@ -19,18 +19,19 @@
 
     #call-to-action {
       bottom: 30px;
+      transform: translateY(-30px);
     }
 
     @keyframes jumpUpAndDown {
       0% {
-        bottom: 30px;
+        transform: translateY(-30px);
       }
       50% {
-        bottom: 35px;
+        transform: translateY(-35px);
       }
 
-      0% {
-        bottom: 30px;
+      100% {
+        transform: translateY(-30px);
       }
     }
 
@@ -98,19 +99,19 @@
     }
 
     .wireframe {
-      top: calc(50% + 120px);
+      top: calc(50% + 100px);
       right: 120px;
       width: 200px;
     }
 
     .mouse {
-      top: calc(50% + 260px);
-      right: 510px;
+      top: calc(50% + 190px);
+      right: 490px;
       width: 61px;
     }
 
     .keyboard {
-      top: calc(50% + 230px);
+      top: calc(50% + 190px);
       left: 310px;
       width: 250px;
     }
