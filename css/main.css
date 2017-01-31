@@ -131,7 +131,8 @@ ul {
   position: relative;
   background-color: #d5af86;
   height: calc(100vh - 50px);
-  min-height: 480px; }
+  min-height: 480px;
+  max-height: 700px; }
   .intro .container {
     height: 100%;
     width: 320px; }
@@ -218,89 +219,91 @@ ul {
     right: -60px;
     width: 100px; }
   .intro .userflows {
-    bottom: 80px;
+    top: calc(50% + 80px);
     left: -19px;
     width: 107px; }
   .intro .pencil {
-    bottom: 116px;
+    top: calc(50% + 100px);
     right: 25px;
     width: 29px; }
   .intro .iphone {
-    bottom: 80px;
+    top: calc(50% + 110px);
     right: 126px;
     width: 29px; }
   .intro .wireframe {
-    bottom: -19px;
+    top: calc(50% + 160px);
     right: 4px;
     width: 83px; }
   .intro .mouse {
-    bottom: 23px;
+    top: calc(50% + 180px);
     right: 100px;
     width: 25px; }
   .intro .keyboard {
-    bottom: 13px;
+    top: calc(50% + 180px);
     left: 35px;
     width: 103px; }
 
 @media (min-width: 768px) {
-  .intro .container {
-    width: 768px; }
-  .intro .content {
-    padding: 60px;
-    top: 50%; }
-  .intro .brand {
-    font-size: 44px;
-    letter-spacing: 1px; }
-  .intro .statement-content {
-    font-size: 17px;
-    margin-bottom: 19px; }
-  .intro .statement-author {
-    font-size: 15px; }
-  .intro .imac {
-    top: 5px;
-    left: auto;
-    right: -2px;
-    width: 763px; }
-  .intro .cutter {
-    top: 175px;
-    right: 15px;
-    width: 98px; }
-  .intro .marker {
-    top: 317px;
-    right: -67px;
-    width: 158px; }
-  .intro .pantones {
-    top: 205px;
-    left: -52px;
-    width: 209px; }
-  .intro .earphones {
-    top: 5px;
-    right: -40px;
-    width: 243px; }
-  .intro .userflows {
-    top: 620px;
-    left: -52px;
-    width: 258px; }
-  .intro .pencil {
-    top: 586px;
-    right: 44px;
-    width: 70px; }
-  .intro .iphone {
-    top: 646px;
-    right: 285px;
-    width: 70px; }
-  .intro .wireframe {
-    top: 767px;
-    right: 23px;
-    width: 200px; }
-  .intro .mouse {
-    top: 843px;
-    right: 286px;
-    width: 61px; }
-  .intro .keyboard {
-    top: 850px;
-    left: 103px;
-    width: 250px; } }
+  .intro {
+    min-height: 650px;
+    max-height: 1024px; }
+    .intro .container {
+      width: 768px; }
+    .intro .content {
+      padding: 60px;
+      top: 50%; }
+    .intro .brand {
+      font-size: 44px;
+      letter-spacing: 1px; }
+    .intro .statement-content {
+      font-size: 17px;
+      margin-bottom: 19px; }
+    .intro .statement-author {
+      font-size: 15px; }
+    .intro .imac {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 65vh; }
+    .intro .cutter {
+      top: calc(50% - 170px);
+      right: 15px;
+      width: 98px; }
+    .intro .marker {
+      top: calc(50% - 86px);
+      right: -67px;
+      width: 158px; }
+    .intro .pantones {
+      top: 205px;
+      left: -52px;
+      width: 209px; }
+    .intro .earphones {
+      top: 5px;
+      right: -40px;
+      width: 243px; }
+    .intro .userflows {
+      top: calc(50% - -44px);
+      left: -52px;
+      width: 228px; }
+    .intro .pencil {
+      top: calc(50% - -14px);
+      right: 44px;
+      width: 70px; }
+    .intro .iphone {
+      top: calc(50% - -70px);
+      right: 495px;
+      width: 70px; }
+    .intro .wireframe {
+      top: calc(50% - -120px);
+      right: 23px;
+      width: 200px; }
+    .intro .mouse {
+      top: calc(50% - -174px);
+      right: 270px;
+      width: 61px; }
+    .intro .keyboard {
+      top: calc(50% - -200px);
+      left: 133px;
+      width: 220px; } }
 
 @media (min-width: 1280px) {
   .intro .brand {
@@ -1720,7 +1723,8 @@ ul {
     flex-flow: row wrap; }
   .site-footer .note {
     font-size: 17px;
-    flex: 1; }
+    flex: 1;
+    padding: 0; }
   .contacts {
     display: flex;
     width: 100%; }

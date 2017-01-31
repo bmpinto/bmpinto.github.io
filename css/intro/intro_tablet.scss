@@ -1,5 +1,7 @@
 @media (min-width: $tablet-breakpoint) {
   .intro {
+    min-height: 650px;
+    max-height: 1024px;
     .container {
       width: 768px;
     }
@@ -24,20 +26,19 @@
     }
 
     .imac {
-      top: 5px;
-      left: auto;
-      right: -2px;
-      width: 763px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 65vh;
     }
 
     .cutter {
-      top: 175px;
+      top: calc(50% - 170px);
       right: 15px;
       width: 98px;
     }
 
     .marker {
-      top: 317px;
+      top: calc(50% - 86px);
       right: -67px;
       width: 158px;
     }
@@ -55,39 +56,39 @@
     }
 
     .userflows {
-      top: 620px;
+      top: calc(50% - -44px);
       left: -52px;
-      width: 258px;
+      width: 228px;
     }
 
     .pencil {
-      top: 586px;
+      top: calc(50% - -14px);
       right: 44px;
       width: 70px;
     }
 
     .iphone {
-      top: 646px;
-      right: 285px;
+      top: calc(50% - -70px);
+      right: 495px;
       width: 70px;
     }
 
     .wireframe {
-      top: 767px;
+      top: calc(50% - -120px);
       right: 23px;
       width: 200px;
     }
 
     .mouse {
-      top: 843px;
-      right: 286px;
+      top: calc(50% - -174px);
+      right: 270px;
       width: 61px; 
     }
 
     .keyboard {
-      top: 850px;
-      left: 103px;
-      width: 250px;
+      top: calc(50% - -200px);
+      left: 133px;
+      width: 220px;
     }
   }
 }
