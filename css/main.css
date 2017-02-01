@@ -5,8 +5,7 @@ html {
   color: #353330;
   font-size: 1em;
   font-family: 'Montserrat', sans-serif;
-  line-height: 1.7;
-  height: 100%; }
+  line-height: 1.7; }
 
 img,
 svg {
@@ -16,8 +15,7 @@ img {
   width: 100%; }
 
 body {
-  padding-top: 50px;
-  height: 100%; }
+  padding-top: 50px; }
 
 ul {
   list-style-type: none;
@@ -355,9 +353,14 @@ ul {
       left: 113px;
       width: 220px; } }
 
+@media (min-width: 768px) {
+  .intro {
+    height: calc(100vh - 60px);
+    min-height: 620px; } }
+
 @media (min-width: 1280px) {
   .intro {
-    min-height: 620px;
+    height: calc(100vh - 75px);
     max-height: 950px; }
     .intro .brand {
       font-size: 52px;
