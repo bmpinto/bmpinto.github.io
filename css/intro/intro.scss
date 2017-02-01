@@ -1,7 +1,7 @@
 .intro {
   position: relative;
   background-color: $brown;
-  height: 100%;
+  height: calc(100vh - 50px);
   min-height: 450px;
   max-height: 700px;
 

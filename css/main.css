@@ -132,7 +132,7 @@ ul {
 .intro {
   position: relative;
   background-color: #d5af86;
-  height: 100%;
+  height: calc(100vh - 50px);
   min-height: 450px;
   max-height: 700px; }
   .intro .container {
