@@ -361,6 +361,7 @@ ul {
 @media (min-width: 1280px) {
   .intro {
     height: calc(100vh - 75px);
+    min-height: 640px;
     max-height: 950px; }
     .intro .brand {
       font-size: 52px;

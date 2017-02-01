@@ -1,6 +1,7 @@
 @media (min-width: $large-desktop-breakpoint) {
   .intro {
     height: calc(100vh - 75px);
+    min-height: 640px;
     max-height: 950px;
 
     .brand {
