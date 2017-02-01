@@ -246,7 +246,7 @@ ul {
     width: 87px;
     left: -35px; }
   .intro .earphones {
-    top: 35px;
+    top: calc(50% - 230px);
     right: 10px;
     width: 100px; }
   .intro .userflows {
@@ -327,7 +327,7 @@ ul {
       left: -52px;
       width: 209px; }
     .intro .earphones {
-      top: -35px;
+      top: calc(50% - 340px);
       right: 10px;
       width: 243px; }
     .intro .userflows {
