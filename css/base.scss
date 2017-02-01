@@ -22,7 +22,6 @@ img {
 body {
   padding-top: 50px;
   height: 100%;
-  overflow-x: hidden;
 }
 
 ul {
@@ -42,7 +41,7 @@ ul {
 }
 
 .site-content {
-  height: 100%;
+  overflow: hidden;
 }
 
 .section {

@@ -156,14 +156,14 @@
   }
 
   .cutter {
-    top: 80px;
-    right: -15px;
+    top: 50%;
+    right: 5px;
     width: 40px;
   }
 
   .marker {
-    top: 160px;
-    right: -35px;
+    top: calc(50% + 60px);
+    right: 5px;
     width: 65px;
   }
 
@@ -174,8 +174,8 @@
   }
 
   .earphones {
-    top: 250px;
-    right: -60px;
+    top: 35px;
+    right: 10px;
     width: 100px;
   }
 
@@ -186,7 +186,7 @@
   }
 
   .pencil {
-    top: calc(50% + 190px);
+    top: calc(50% + 110px);
     right: 25px;
     width: 29px;
   }
