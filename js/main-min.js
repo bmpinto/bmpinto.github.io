@@ -195,11 +195,13 @@ function scroll() {
   }
 }
 
-document.querySelector('#logo').addEventListener('click', function(item) {
+document.querySelector('#logo').addEventListener('click', function(e) {
+  e.preventDefault()
   scrollToY(0)
 })
-document.querySelector('#call-to-action').addEventListener('click', function() {
-  scrollToSection(this.getAttribute('href'));
+document.querySelector('#call-to-action').addEventListener('click', function(e) {
+  e.preventDefault()
+  scrollToSection(this.getAttribute('href'))
 })
 var lazy = document.querySelectorAll('.lazy')
 var menuItems = document.querySelectorAll('.main-nav a')

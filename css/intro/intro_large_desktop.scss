@@ -19,19 +19,18 @@
 
     #call-to-action {
       bottom: 30px;
-      transform: translateY(-30px);
     }
 
     @keyframes jumpUpAndDown {
       0% {
-        transform: translateY(-30px);
+        bottom: 30px;
       }
       50% {
-        transform: translateY(-35px);
+        bottom: 35px;
       }
 
       100% {
-        transform: translateY(-30px);
+        bottom: 30px;
       }
     }
 
