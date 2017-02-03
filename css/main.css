@@ -144,6 +144,7 @@ ul {
     top: calc(50% - 20px);
     transform: translate(-50%, -50%); }
   .intro #call-to-action {
+    -webkit-tap-highlight-color: transparent;
     width: 26px;
     height: 26px;
     background-position: -10px -143px;
