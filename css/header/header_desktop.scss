@@ -53,10 +53,14 @@
     a {
       display: inline-block;
 
-      &:hover,
-      &:focus {
+      &:hover {
         color: $brown;
         border: none;
+      }
+
+      &:focus {
+        color: $brown;
+        border-bottom: 2px solid $brown !important;
       }
 
       &.active {

@@ -606,9 +606,12 @@ ul {
     font-size: 15px; }
     .main-nav a {
       display: inline-block; }
-      .main-nav a:hover, .main-nav a:focus {
+      .main-nav a:hover {
         color: #d5af86;
         border: none; }
+      .main-nav a:focus {
+        color: #d5af86;
+        border-bottom: 2px solid #d5af86 !important; }
       .main-nav a.active {
         border-bottom: 2px solid #fbd37c; }
     .main-nav a + a {
