@@ -593,7 +593,7 @@ ul {
     flex-flow: row wrap;
     align-items: center;
     padding: 5px 0 0 0;
-    position: relative;
+    position: static;
     background: none;
     max-height: none;
     height: auto;
@@ -603,7 +603,12 @@ ul {
     display: inline-block;
     vertical-align: top;
     font-family: "Hind", sans-serif;
-    font-size: 15px; }
+    font-size: 15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(calc(-50% + 53px)) translateY(calc(-50% + 2px));
+    width: 575px; }
     .main-nav a {
       display: inline-block; }
       .main-nav a:hover {
@@ -664,7 +669,14 @@ ul {
       background-position: -217px 175px; }
     #logo:active:before {
       background-position: -269px 175px; }
+  .menu {
+    position: relative; }
   .main-nav {
+    position: relative;
+    width: auto;
+    transform: none;
+    left: auto;
+    top: auto;
     font-size: 17px; }
     .main-nav a + a {
       margin-left: 25px; }

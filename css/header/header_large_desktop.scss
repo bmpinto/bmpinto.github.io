@@ -26,7 +26,16 @@
     }
   }
 
+  .menu {
+    position: relative;
+  }
+
   .main-nav {
+    position: relative;
+    width: auto;
+    transform: none;
+    left: auto;
+    top: auto;
     font-size: 17px;
 
     a + a {
