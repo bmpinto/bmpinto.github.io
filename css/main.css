@@ -475,6 +475,8 @@ ul {
 .menu-trigger {
   -webkit-appearance: none;
   -moz-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
   border: none;
   background: none;
   background-color: #fbd37c;
